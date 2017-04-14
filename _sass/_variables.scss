@@ -4,7 +4,40 @@
 //
 
 // Colors
-$blue: #4183C4;
+$blue: #2196F3;
+$blue-light: #64B5F6;
+$blue-dark: #1976D2;
+$blue-alpha: #2979FF;
+
+$red: #1E88E5;
+$red-light: #64B5F6;
+$red-dark: #1565C0;
+$red-alpha: #2979FF;
+
+$green: #4CAF50;
+$green-light: #81C784;
+$green-dark: #388E3C;
+$green-alpha: #00E676;
+
+$purple: #673AB7;
+$purple-light: #9575CD;
+$purple-dark: #512DA8;
+$purple-alpha: #651FFF;
+
+$yellow: #FFEB3B;
+$yellow-light: #FFF176;
+$yellow-dark: #FBC02D;
+$yellow-alpha: #FFEA00;
+
+$orange: #FF5722;
+$orange-light: #FF8A65;
+$orange-dark: #E64A19;
+$orange-alpha: #FF3D00;
+
+$pink: #E91E63;
+$pink-light: #F06292;
+$pink-dark: #C2185B;
+$pink-alpha: #F50057;
 
 // Grays
 $black: #000;
@@ -14,14 +47,21 @@ $gray: #666;
 $lightGray: #eee;
 $white: #fff;
 
+//Blue Grays
+$dark-blue-gray: #00061a;
+$blue-gray: #000d33;
+$light-blue-gray: #ccd9ff;
+
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
+$serif-font-stack: "Lato","Trebuchet MS", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-serif-font-stack: "Source Serif Pro", "Palatino Linotype", Georgia, serif;
 
 // Mobile breakpoints
-@mixin mobile {
-  @media screen and (max-width: 640px) {
+@mixin tablet {
+  @media screen and (min-width: 768px) {
     @content;
   }
 }
