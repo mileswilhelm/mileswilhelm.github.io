@@ -44,19 +44,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3.998em;
+  font-size: 2em;
+
+  @include tablet {
+    font-size: 3.998em;
+  }
 }
 
 h2 {
-  font-size: 2.827em;
+  font-size: 1.65em;
+
+  @include tablet {
+    font-size: 2.827em;
+  }
 }
 
 h3 {
-  font-size: 1.999em;
+  font-size: 1.41em;
+
+  @include tablet {
+    font-size: 1.999em;
+  }
 }
 
 h4, h5, h6 {
-  font-size: 1.414em;
+  font-size: 1.2em;
+
+  @include tablet {
+    font-size: 1.414em;
+  }
 }
 
 p {
