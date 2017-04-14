@@ -1,6 +1,8 @@
 ---
 layout: post
 title: First Blog Post
+category: Dev
+tags: [web, jekyll]
 ---
 
 # Blog Header
