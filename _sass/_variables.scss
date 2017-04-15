@@ -108,7 +108,7 @@ $sans-serif-font-stack: "Lato","Trebuchet MS", "Segoe UI", "Helvetica Neue", Hel
   @include text-underline($background, $text);
   @include text-selection($selection);
 
-  color: $text;
+  color: $blue-alpha;
   text-decoration: none;
 
   *,
@@ -120,10 +120,9 @@ $sans-serif-font-stack: "Lato","Trebuchet MS", "Segoe UI", "Helvetica Neue", Hel
   }
 
   &:visited {
-    color: $text;
+    color: $purple-alpha;
   }
 }
 
-$color-text:        #333332;
 $color-background:  #fff;
 $color-selection:   #b4d5fe;

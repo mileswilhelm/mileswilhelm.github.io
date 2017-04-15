@@ -96,7 +96,7 @@ a {
 }
 
 .post a {
-  @include link-underline($color-background, $color-text, $color-selection);
+  @include link-underline($color-background, $darkerGray, $color-selection);
 }
 
 ul, ol {
