@@ -95,11 +95,10 @@ a {
   background: -webkit-linear-gradient(#999, #999) center 1.09em no-repeat;
   background: linear-gradient(#999, #999) center 1.09em no-repeat;
   /*  can precisely control size in relation to the text  */
-  background-size: 75% 1px;
+  background-size: 100% 1px;
   transition: background-size 0.3s ease;
   &:hover, &:active {
-    color: $blue;
-    background-size: 100% 1px;
+    color: $blue-alpha;
   }
 }
 
