@@ -87,19 +87,16 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $blue-alpha;
   text-decoration: none;
 	cursor: pointer;
-  text-shadow: 0 0 #333, .08em 0 0 #fff, 0 0, -.08em 0 0 #fff;
-  /*  gradient background allows us to use css only & re-position it  */
-  background: -webkit-linear-gradient(#999, #999) center 1.09em no-repeat;
-  background: linear-gradient(#999, #999) center 1.09em no-repeat;
-  /*  can precisely control size in relation to the text  */
-  background-size: 100% 1px;
-  transition: background-size 0.3s ease;
   &:hover, &:active {
-    color: $blue-alpha;
+    color: $blue-dark;
   }
+}
+
+.post a {
+  @include link-underline($color-background, $color-text, $color-selection);
 }
 
 ul, ol {
