@@ -46,6 +46,13 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2em;
 
+  a {
+    color: inherit;
+    &:hover, &:focus {
+      color: inherit;
+    }
+  }
+
   @include tablet {
     font-size: 3.998em;
   }
@@ -83,8 +90,16 @@ a {
   color: $blue;
   text-decoration: none;
 	cursor: pointer;
+  text-shadow: 0 0 #333, .08em 0 0 #fff, 0 0, -.08em 0 0 #fff;
+  /*  gradient background allows us to use css only & re-position it  */
+  background: -webkit-linear-gradient(#999, #999) center 1.09em no-repeat;
+  background: linear-gradient(#999, #999) center 1.09em no-repeat;
+  /*  can precisely control size in relation to the text  */
+  background-size: 75% 1px;
+  transition: background-size 0.3s ease;
   &:hover, &:active {
     color: $blue;
+    background-size: 100% 1px;
   }
 }
 
@@ -134,11 +149,11 @@ img {
 // Specify the color of the selection
 ::-moz-selection {
   color: $black;
-  background: $lightGray;
+  background: $blue-alpha;
 }
 ::selection {
   color: $black;
-  background: $lightGray;
+  background: $blue-alpha;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -264,12 +279,11 @@ nav {
 
 .post {
   blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
-    font-style: italic;
+    margin-bottom: 1rem;
+    border-left: 2px solid $blue-gray;
+    padding: 0.25rem 1rem;
+    color: $dark-blue-gray;
+    font-size: 125%;
   }
 
   .comments {
