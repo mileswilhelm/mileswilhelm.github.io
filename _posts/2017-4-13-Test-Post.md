@@ -1,16 +1,16 @@
 ---
 layout: post
-title: First Blog Post
+title: Adding Shadows to Cue Visitors to Scrollable Elements
 category: Dev
-tags: [web, jekyll]
+tags: [web, UX, UI, responsive, css, javascript]
 ---
 
-# Blog Header
+## Inset Shadows on Horizontal Scrolling elements
 
-Lorem ipsum sit dolor. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+It was reported in November 2016 that mobile overtook desktops in terms of web visits. As viewports shrink, designers are tasked with the challenge of fitting all of the same information their desktop site holds onto mobile devices while staying usable.
 
-> This is a blockquote.
->
-> This is the second paragraph in a blockquote.
->
-> ### This is an H3 in a blockquote.
+In the past I've created designs which feature horizontally scrollable elements. These elements include:
+
+- Links inside header navigation
+- Related products in an ecommerce product page
+- Tables with a lot of columns

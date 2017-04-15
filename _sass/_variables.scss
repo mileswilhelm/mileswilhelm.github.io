@@ -83,7 +83,7 @@ $sans-serif-font-stack: "Lato","Trebuchet MS", "Segoe UI", "Helvetica Neue", Hel
 }
 
 @mixin text-underline($color-bg, $color-text) {
-  background-image: linear-gradient($color-text, $color-text);
+  background-image: linear-gradient($gray, $gray);
   background-size: 1px 1px;
   background-repeat: repeat-x;
   background-position: 0% 95%;

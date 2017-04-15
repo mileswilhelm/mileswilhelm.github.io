@@ -50,6 +50,7 @@ h1 {
     color: inherit;
     &:hover, &:focus {
       color: inherit;
+      background-image: linear-gradient($black, $black);
     }
   }
 
