@@ -46,33 +46,28 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2em;
 
-  a {
-    color: inherit;
-    &:hover, &:focus {
-      color: inherit;
-    }
-  }
-
   @include tablet {
     font-size: 3.998em;
   }
 }
 
-.post {
-  > h1 {
-    &:after {
-      content:'\2192';
-      font-size: 2.5rem;
-      opacity: 0;
-      margin-left: 0;
-      transition: all 0.5s ease;
-    }
-  }
-  &:hover {
+.posts{
+  .post {
     > h1 {
       &:after {
-        opacity: 0.5;
-        margin-left: 2rem;
+        content:'\2192';
+        font-size: 2.5rem;
+        opacity: 0;
+        margin-left: 0;
+        transition: all 0.5s ease;
+      }
+    }
+    &:hover {
+      > h1 {
+        &:after {
+          opacity: 0.5;
+          margin-left: 2rem;
+        }
       }
     }
   }
