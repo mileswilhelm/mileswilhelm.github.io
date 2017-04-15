@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adding Shadows to Cue Visitors to Scrollable Elements
+title: Adding Inset Shadows to Cue Visitors to Scrollable Elements
 category: Dev
 tags: [web, UX, UI, responsive, css, javascript]
 ---
