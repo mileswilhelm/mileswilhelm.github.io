@@ -321,7 +321,7 @@ footer {
 // posts
 //
 #main {
-  article.post {
+  > article.post {
     background-image: url('../images/circles-1000w.svg');
     background-repeat: no-repeat;
     background-size: contain;
