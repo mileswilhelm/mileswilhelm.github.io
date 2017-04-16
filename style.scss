@@ -7,7 +7,7 @@
 
 @import "reset";
 @import "variables";
-@import "animations";
+
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -322,65 +322,12 @@ footer {
 // posts
 //
 
-//
-// ANIMATIONS
-//
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari and Chrome */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}​
-
-/* Opera */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}​
-
 #main {
-  > article.post {
     h1 {
       &:first-child {
         padding-top: 3rem;
       }
     }
-  }
-}
-
-.post {
-  position: relative;
-  .post__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    background-image: url('../images/circles-1000w.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    -webkit-animation: fadein 4s; /* Safari and Chrome */
-    -moz-animation: fadein 4s; /* Firefox */
-    -ms-animation: fadein 4s; /* Internet Explorer */
-    -o-animation: fadein 4s; /* Opera */
-    animation: fadein 4s;
   }
 }
 
