@@ -27,7 +27,7 @@ There were 3 goals I wanted to accomplish with this snippet:
 
 ### Inspiration
 
-![]()
+![ESPN Box Score inset shadow inspiration](https://raw.githubusercontent.com/mileswilhelm/mileswilhelm.github.io/master/images/jekyll-logo.png "ESPN Box Score inset shadow inspiration")
 
 While using the ESPN app on my phone to check the box score of a basketball game, I noticed they utilize inset shadows on each end of the table to indicate whether there was more to scroll to in each direction. This UX design stuck out to me and motivated me to recreate it.
 
@@ -39,7 +39,7 @@ The HTML structure for this project is simple but important. It requires a div w
 <h1>Inset Shadows on Horizontal Scrolling elements</h1>
 <div class="inset-wrapper">
   <div class="inset-container not-at-right">
-    &lt;!-- whatever HTML you have inside --&gt;
+    <!-- whatever HTML you have inside -->
   </div>
 </div>
 ```
