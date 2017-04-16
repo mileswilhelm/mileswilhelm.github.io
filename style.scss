@@ -323,10 +323,9 @@ footer {
 //
 
 #main {
-    h1 {
-      &:first-child {
-        padding-top: 3rem;
-      }
+  h1 {
+    &:first-child {
+      padding-top: 3rem;
     }
   }
 }
