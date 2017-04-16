@@ -325,14 +325,66 @@ footer {
 
 #main {
   h1 {
-    &:first-child {
+    &:first-of-type {
       padding-top: 3rem;
+      z-index: 2;
     }
   }
 }
 
 .entry {
   padding-top: 50px;
+}
+
+.bg-c1 {
+	background-image: url('../images/circle-orange.svg');
+	height: 130px;
+	width: 130px;
+	left: -10px;
+}
+
+article.post {
+	position: relative;
+}
+
+[class^="bg-c"] {
+	display: block;
+	position: absolute;
+	z-index: -1;
+	opacity: 0.3;
+	animation: fadein 5s, grow 15s;
+}
+
+.bg-c2 {
+	background-image: url(../images/circle-teal.svg);
+	height: 250px;
+	width: 250px;
+	top: -100px;
+	left: 60px;
+}
+
+.bg-c3 {
+	background-image: url(../images/circle-blue.svg);
+	height: 190px;
+	width: 190px;
+	left: -60px;
+	top: -110px;
+}
+
+.bg-c4 {
+	background-image: url(../images/circle-fuchsia.svg);
+	height: 315px;
+	width: 315px;
+	right: -100px;
+	top: -40px;
+}
+
+.bg-c5 {
+	background-image: url(../images/circle-purple.svg);
+	height: 185px;
+	width: 185px;
+	right: 130px;
+	top: -30px;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS

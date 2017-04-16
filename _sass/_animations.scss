@@ -1,16 +1,33 @@
 @keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 1; }
+    to   { opacity: 0.3; }
 }
 
 /* Firefox */
 @-moz-keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 1; }
+    to   { opacity: 0.3; }
 }
 
 /* Safari and Chrome */
 @-webkit-keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 1; }
+    to   { opacity: 0.3; }
+}
+
+@keyframes grow {
+    0%, 100% { transform: scale(0,0); }
+    50%   { transform: scale(1,1); }
+}
+
+/* Firefox */
+@-moz-keyframes grow {
+  0%, 100% { transform: scale(0,0); }
+  50%   { transform: scale(1,1); }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes grow {
+  0%, 100% { transform: scale(0,0); }
+  50%   { transform: scale(1,1); }
 }
