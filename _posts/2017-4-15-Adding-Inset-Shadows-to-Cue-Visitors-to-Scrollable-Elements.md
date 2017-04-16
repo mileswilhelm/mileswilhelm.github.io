@@ -34,7 +34,6 @@ While using the ESPN app on my phone to check the box score of a basketball game
 The HTML structure for this project is simple but important. It requires a div wrapping the main containing div. The reason the outer div is required is for proper CSS styling. It'll make sense in the next section.
 
 ```html
-<h1>Inset Shadows on Horizontal Scrolling elements</h1>
 <div class="inset-wrapper">
   <div class="inset-container not-at-right">
     <!-- whatever HTML you have inside -->
