@@ -320,14 +320,15 @@ footer {
 //
 // posts
 //
-
-article.post {
-  background-image: url('../images/circles-1000w.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  h1 {
-    &:first-child {
-      padding-top: 3rem;
+#main {
+  article.post {
+    background-image: url('../images/circles-1000w.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    h1 {
+      &:first-child {
+        padding-top: 3rem;
+      }
     }
   }
 }
