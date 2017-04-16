@@ -159,11 +159,9 @@ img {
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
   background: $blue-alpha;
 }
 ::selection {
-  color: $black;
   background: $blue-alpha;
 }
 
@@ -292,9 +290,8 @@ nav {
 .post {
   blockquote {
     margin-bottom: 1rem;
-    border-left: 2px solid $blue-gray;
+    border-left: 5px solid $blue-gray;
     padding: 0.25rem 1rem;
-    color: $dark-blue-gray;
     font-size: 125%;
   }
 
@@ -318,6 +315,25 @@ nav {
 footer {
   padding: 20px 0;
   text-align: center;
+}
+
+//
+// posts
+//
+
+article.post {
+  background-image: url('../images/circles-1000w.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  h1 {
+    &:first-child {
+      padding-top: 3rem;
+    }
+  }
+}
+
+.entry {
+  padding-top: 50px;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
