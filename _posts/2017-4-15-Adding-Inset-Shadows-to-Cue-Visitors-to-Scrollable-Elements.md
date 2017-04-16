@@ -5,9 +5,7 @@ category: Dev
 tags: [web, UX, UI, responsive, css, javascript]
 ---
 
-## Inset Shadows on Horizontal Scrolling elements
-
-It was reported in November 2016 that mobile (smartphone and tablet) web visits overtook desktop visits for the first time. As viewports shrink, designers are tasked with the challenge of fitting all of the same information their desktop site holds onto mobile devices while staying usable.
+It was reported in November 2016 that [mobile (smartphone and tablet) web visits overtook desktop visits](http://gs.statcounter.com/press/mobile-and-tablet-internet-usage-exceeds-desktop-for-first-time-worldwide) for the first time. As viewports shrink, designers are tasked with the challenge of fitting all of the same information their desktop site holds onto mobile devices while staying usable.
 
 In the past I've created designs which feature horizontally scrollable elements. These elements include:
 
