@@ -193,11 +193,7 @@ img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
 
-  @include tablet {
-    text-align: center;
-  }
 }
 
 .site-avatar {
@@ -205,12 +201,6 @@ img {
   width: 70px;
   height: 70px;
   margin-right: 15px;
-
-  @include tablet {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
 
   img {
     border-radius: 5px;
@@ -220,11 +210,6 @@ img {
 .site-info {
   float: left;
 
-  @include tablet {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
 }
 
 .site-name {
@@ -253,13 +238,6 @@ nav {
   font-family: $helveticaNeue;
   font-size: 18px;
 
-  @include tablet {
-    float: none;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
-  }
-
   a {
     margin-left: 20px;
     color: $darkGray;
@@ -269,7 +247,6 @@ nav {
 
     @include tablet {
       margin: 0 10px;
-      color: $blue;
     }
   }
 }
