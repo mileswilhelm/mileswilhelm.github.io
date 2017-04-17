@@ -302,17 +302,24 @@ footer {
 //
 
 #main {
-  h1 {
-    &:first-of-type {
-      padding-top: 3rem;
-      z-index: 2;
+  > .post {
+
+    .entry {
+      padding-top: 50px;
+    }
+
+    h1 {
+
+      &:first-of-type {
+        padding-top: 3rem;
+        z-index: 2;
+      }
+      
     }
   }
 }
 
-.entry {
-  padding-top: 50px;
-}
+
 
 article.post {
 	position: relative;
