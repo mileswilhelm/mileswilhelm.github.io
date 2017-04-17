@@ -18,6 +18,7 @@
 // html font-size 1.125em to equal 18px
 html {
   font-size: 1.125em;
+  overflow-x: hidden;
 }
 
 body {
@@ -26,6 +27,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: $darkerGray;
+  overflow-x: hidden;
 }
 
 .body-wrapper {
