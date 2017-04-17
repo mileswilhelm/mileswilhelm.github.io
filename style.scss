@@ -26,6 +26,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: $darkerGray;
+  overflow-x: hidden;
 }
 
 .container {
@@ -313,13 +314,6 @@ footer {
   padding-top: 50px;
 }
 
-.bg-c1 {
-	background-image: url('../images/circle-orange.svg');
-	height: 130px;
-	width: 130px;
-	left: -10px;
-}
-
 article.post {
 	position: relative;
 }
@@ -329,38 +323,47 @@ article.post {
 	position: absolute;
 	z-index: -1;
 	opacity: 0.3;
-	animation: fadein 5s, grow 15s;
+	animation: fadein 7.5s, grow 7.5s;
+  animation-iteration-count: 3
+}
+
+.bg-c1 {
+	background-image: url('../images/circle-orange.svg');
+	height: 130px;
+	width: 130px;
+	right: 10px;
+  top: -80px;
 }
 
 .bg-c2 {
 	background-image: url(../images/circle-teal.svg);
 	height: 250px;
 	width: 250px;
-	top: -100px;
-	left: 60px;
+	top: -30px;
+	left: -130px;
 }
 
 .bg-c3 {
 	background-image: url(../images/circle-blue.svg);
 	height: 190px;
 	width: 190px;
-	left: -60px;
-	top: -110px;
+	left: 40px;
+	top: -50px;
 }
 
 .bg-c4 {
 	background-image: url(../images/circle-fuchsia.svg);
 	height: 315px;
 	width: 315px;
-	right: -100px;
-	top: -40px;
+	right: -200px;
+	top: -50px;
 }
 
 .bg-c5 {
 	background-image: url(../images/circle-purple.svg);
 	height: 185px;
 	width: 185px;
-	right: 130px;
+	right: 50px;
 	top: -30px;
 }
 
