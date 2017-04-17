@@ -323,8 +323,8 @@ article.post {
 	position: absolute;
 	z-index: -1;
 	opacity: 0.3;
-	animation: fadein 7.5s, grow 7.5s;
-  animation-iteration-count: 3
+	animation: grow 7.5s;
+  animation-iteration-count: 3;
 }
 
 .bg-c1 {
