@@ -1,0 +1,2370 @@
+<htmL lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>Opto Drug Web App</title>
+    <link href="img/favicon.png" rel="icon" type="image/png">
+    <link href="css/temp.css" rel="stylesheet" async>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" async>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/materialize.min.css" rel="stylesheet" async media="screen,projection">
+    <!--[if lt IE 9]><script src=https://oss.maxcdn.com/htmL5shiv/3.7.2/htmL5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]-->
+    <style>
+        body {
+            font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+        }
+        
+        #search {
+            height: 47px;
+            padding: 8.5px 10px 8.5px 46px;
+            margin-bottom: 0
+        }
+        
+        @media screen and (min-width:768px) {
+            #search {
+                padding: 8.5px 10px 8.5px 50px
+            }
+        }
+        
+        .collapsible {
+            margin: 0
+        }
+        
+        .collapsible-header h1,
+        .collapsible-header h2,
+        .collapsible-header h3,
+        .collapsible-header h4,
+        .collapsible-header h5,
+        .collapsible-header h6 {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .06em
+        }
+        
+        .collapsible-header>p {
+            padding: .5rem
+        }
+        
+        footer img {
+            max-height: 50px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            transition: .75s all cubic-bezier(.68, -.55, .27, 1.55)
+        }
+        
+        footer img:hover {
+            transform: rotate(180deg)
+        }
+        
+        footer {
+            position: relative;
+            bottom: 0;
+            width: 100%
+        }
+        
+        li.waves-effect {
+            display: list-item
+        }
+        
+        .collapsible-header {
+            padding: .5rem
+        }
+        
+        span.badger {
+            min-width: 3rem;
+            padding: 0 6px;
+            text-align: center;
+            font-size: 1rem;
+            line-height: inherit;
+            color: #757575;
+            position: absolute;
+            right: 15px;
+            box-sizing: border-box;
+            background: rgba(233, 30, 99, .15);
+            border-radius: 2rem
+        }
+        
+        footer.page-footer .footer-copyright {
+            line-height: 65px;
+            height: 65px
+        }
+        
+        .off-white {
+            background-color: #fdfdfd!important
+        }
+        
+        .drug {
+            padding: 1rem
+        }
+        
+        .drug li {
+            padding: 5px
+        }
+        
+        .drug li:nth-child(even) {
+            background-color: #ddd
+        }
+        
+        i.fa.fa-2x {
+            float: right;
+            position: absolute;
+            top: 40%;
+            right: 3rem;
+            color: #000;
+            width: 2rem;
+            height: 2rem;
+            line-height: 2rem;
+            font-size: 1.5rem;
+            border-radius: 1rem
+        }
+        
+        @media screen and (max-width:768px) {
+            i.fa.fa-2x {
+                right: -.5rem
+            }
+        }
+        
+        .drug>li>div {
+            margin: .3rem 1rem
+        }
+        
+        strong {
+            font-weight: 700
+        }
+        
+        .collapsible-header.active {
+            z-index: 9;
+            box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, .4)
+        }
+        
+        li.active>div.collapsible-body>ul>li.active>div.collapsible-header.active {
+            z-index: 7
+        }
+        
+        li.active>div.collapsible-body>ul>li.active>div.collapsible-body>ul>li.active>div.collapsible-header.active {
+            z-index: 5
+        }
+        
+        li.active>div.collapsible-body>ul>li.active>div.collapsible-body>ul>li.active>div.collapsible-body>ul>li.active>div.collapsible-header.active {
+            z-index: 3
+        }
+        
+        li.active>div.collapsible-body>ul>li.active>div.collapsible-body>ul>li.active>div.collapsible-body>ul>li.active>div.collapsible-body>ul>li.active>div.collapsible-header.active {
+            z-index: 2
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: 1.5rem
+        }
+        
+        .beta-blockers {
+            background: linear-gradient(to right, #FFF59D 50%, #90CAF9 51%)
+        }
+		
+		.antibiotic-topical__color {
+			background-color: #dec986 !important;
+		}
+    </style>
+</head>
+
+<body>
+    <nav class="blue darken-3">
+        <div class="nav-wrapper">
+            <form>
+                <div class="input-field">
+                    <input class="noEnterSubmit" data-list=".list" id="search" name="search" placeholder="Search OptoDrugs" type="search">
+                    <label for="#search" class="active"><i class="material-icons">search</i></label><i class="material-icons close-button active">close</i></div>
+            </form>
+        </div>
+    </nav>
+    <ul class="grey collapsible list lighten-1" data-collapsible="expandable">
+        <li>
+            <div class="collapsible-header text-center waves-effect grey lighten-1 waves-light">
+                <h2>Antibiotics</h2><i class="fa fa-2x fa-chevron-up"></i></div>
+            <div class="collapsible-body grey lighten-3">
+                <ul class="grey lighten-3 collapsible list" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header text-center waves-effect antibiotic-topical__color">
+                            <h2>Topicals</h2></div>
+                        <div class="collapsible-body grey lighten-5" >
+                            <ul class="grey lighten-5 collapsible list" data-collapsible="accordion">
+                                <li>
+                                    <div class="collapsible-header text-center waves-effect grey lighten-5"><span class="badger">8</span>
+                                        <h2>Fluoroquinolones</h2></div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="grey lighten-5 collapsible list" data-collapsible="accordion">
+                                            <li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Besivance</h2>
+                                                    <p class="lead text-muted">Besifloxacin 0.6%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">antibiotics topicals fluoroquinolones</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>1 year</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>5 mL bottle</div>
+                                                        </li>
+                                                        <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                            <div>TID (viscous - DuraSite)</div>
+                                                        </li>
+                                                        <li><strong>Ulcer Dosing:</strong>
+                                                            <div>off label, q1-2h after loading</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Vigamox</h2>
+                                                    <p class="lead text-muted">Moxifloxacin 0.5%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">antibiotics topicals fluoroquinolones</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>1 year</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>3 mL</div>
+                                                        </li>
+                                                        <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                            <div>TID x7 days</div>
+                                                        </li>
+                                                        <li><strong>Ulcer Dosing:</strong>
+                                                            <div>off label, q1-2h after loading</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Moxeza</h2>
+                                                    <p class="lead text-muted">Moxifloxacin 0.5% (xanthan gum)</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">antibiotics topicals fluoroquinolones</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>4 months</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>3 mL</div>
+                                                        </li>
+                                                        <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                            <div>BID (viscous - xanthan gum)</div>
+                                                        </li>
+                                                        <li><strong>Ulcer Dosing:</strong>
+                                                            <div>off label, q1-2h after loading</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Zymaxid</h2>
+                                                    <p class="lead text-muted">Gatifloxacin 0.5%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">antibiotics topicals fluoroquinolones</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>1 year</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>2.5 mL</div>
+                                                        </li>
+                                                        <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                            <div>Q2h x day 1 then BID-QID</div>
+                                                        </li>
+                                                        <li><strong>Ulcer Dosing:</strong>
+                                                            <div>off label, q1-2h after loading</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Ciloxan</h2>
+                                                    <p class="lead text-muted">Ciprofloxacin 0.3%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">antibiotics topicals fluoroquinolones</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>1 year soln, 2 years ointment</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>5, 10 mL soln / 3.5 g ointment</div>
+                                                        </li>
+                                                        <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                            <div>QID</div>
+                                                        </li>
+                                                        <li><strong>Ulcer Dosing:</strong>
+                                                            <div>Two drops Q15 mins x 6 hours then Q30 mins x 18 hours</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Iquix</h2>
+                                                    <p class="lead text-muted">Levofloxacin 1.5%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">antibiotics topicals fluoroquinolones</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>6 years</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>5 mL</div>
+                                                        </li>
+                                                        <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                            <div>QID</div>
+                                                        </li>
+                                                        <li><strong>Ulcer Dosing:</strong>
+                                                            <div>Q30 mins x 2days during waking hours, twice at night</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Quixin</h2>
+                                                    <p class="lead text-muted">Levofloxacin 0.5%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">antibiotics topicals fluoroquinolones</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>1 year</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>5 mL</div>
+                                                        </li>
+                                                        <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                            <div>QID</div>
+                                                        </li>
+                                                        <li><strong>Ulcer Dosing:</strong>
+                                                            <div>N/R</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Ocuflox</h2>
+                                                    <p class="lead text-muted">Ofloxacin 0.3%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">antibiotics topicals fluoroquinolones</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>1 year</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>5 &amp; 10 mL</div>
+                                                        </li>
+                                                        <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                            <div>QID</div>
+                                                        </li>
+                                                        <li><strong>Ulcer Dosing:</strong>
+                                                            <div>Q30 mins x 2days during waking hours, twice at night</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header text-center waves-effect grey lighten-5"><span class="badger">2</span>
+                                        <h2>Aminoglycosides</h2></div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="grey lighten-5 collapsible list" data-collapsible="accordion">
+                                            <li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Tobrex</h2>
+                                                    <p class="lead text-muted">Tobramycin 0.3%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">antibiotics topicals aminoglycosides</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>2 months</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>5 mL and 3.5 g ung</div>
+                                                        </li>
+                                                        <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                            <div>QID for drops; BID-QID for ointment</div>
+                                                        </li>
+                                                        <li><strong>Ulcer Dosing:</strong>
+                                                            <div>Only if fortified</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Genoptic</h2>
+                                                    <p class="lead text-muted">Gentamicin 0.3%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">antibiotics topicals aminoglycosides</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>N/A (no lower age established)</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>5 mL and 3.5 g ung</div>
+                                                        </li>
+                                                        <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                            <div>QID for drops; BID-QID for ointment</div>
+                                                        </li>
+                                                        <li><strong>Ulcer Dosing:</strong>
+                                                            <div>N/R</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header text-center waves-effect grey lighten-5">
+                                        <h2>Combination Antibiotics</h2></div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="grey lighten-3 collapsible list" data-collapsible="accordion">
+                                            <li>
+                                                <div class="white collapsible-header text-center waves-effect"><span class="badger">3</span>
+                                                    <h2>Combination Topical Antibiotics</h2></div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="white collapsible list" data-collapsible="accordion">
+                                                        <li>
+                                                            <div class="white collapsible-header text-center waves-effect">
+                                                                <h2>Polytrim</h2>
+                                                                <p class="lead text-muted">Polymixin B / trimethoprim</p>
+                                                            </div>
+                                                            <div class="white collapsible-body" >
+                                                                <ul class="drug">
+                                                                    <li style="list-style:none"><span class="hidden">antibiotics topicals combination topical antibiotics</span></li>
+                                                                    <li><strong>Pediatric Use:</strong>
+                                                                        <div>2 months</div>
+                                                                    </li>
+                                                                    <li><strong>Supplied:</strong>
+                                                                        <div>10 mL soln</div>
+                                                                    </li>
+                                                                    <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                                        <div>Q 3 hours x 7 days</div>
+                                                                    </li>
+                                                                    <li><strong>Ulcer Dosing:</strong>
+                                                                        <div>N/R</div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="white collapsible-header text-center waves-effect">
+                                                                <h2>Polysporin</h2>
+                                                                <p class="lead text-muted">Polymixin B / Bacitracin</p>
+                                                            </div>
+                                                            <div class="white collapsible-body" >
+                                                                <ul class="drug">
+                                                                    <li style="list-style:none"><span class="hidden">antibiotics topicals combination topical antibiotics</span></li>
+                                                                    <li><strong>Pediatric Use:</strong>
+                                                                        <div>N/A</div>
+                                                                    </li>
+                                                                    <li><strong>Supplied:</strong>
+                                                                        <div>3.5 g ointment</div>
+                                                                    </li>
+                                                                    <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                                        <div>Varies</div>
+                                                                    </li>
+                                                                    <li><strong>Ulcer Dosing:</strong>
+                                                                        <div>N/R</div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="white collapsible-header text-center waves-effect">
+                                                                <h2>Neosporin</h2>
+                                                                <p class="lead text-muted">Polymixin B / Neomycin / Gramicidin</p>
+                                                            </div>
+                                                            <div class="white collapsible-body" >
+                                                                <ul class="drug">
+                                                                    <li style="list-style:none"><span class="hidden">antibiotics topicals combination topical antibiotics</span></li>
+                                                                    <li><strong>Pediatric Use:</strong>
+                                                                        <div>N/A</div>
+                                                                    </li>
+                                                                    <li><strong>Supplied:</strong>
+                                                                        <div>10 mL soln / 3.5 g ointment</div>
+                                                                    </li>
+                                                                    <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                                        <div>Varies</div>
+                                                                    </li>
+                                                                    <li><strong>Ulcer Dosing:</strong>
+                                                                        <div>N/R</div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="white collapsible-header text-center waves-effect"><span class="badger">9</span>
+                                                    <h2>Topical Antibiotic/Steroid Combination</h2></div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="white collapsible list" data-collapsible="accordion">
+                                                        <li>
+                                                            <div class="white collapsible-header text-center waves-effect">
+                                                                <h2>Tobradex and available generic</h2>
+                                                                <p class="lead text-muted">Tobramycin 0.3% and dexamethasone 0.1%</p>
+                                                            </div>
+                                                            <div class="white collapsible-body" >
+                                                                <ul class="drug">
+                                                                    <li style="list-style:none"><span class="hidden">antibiotics topicals Topical Antibiotic/Steroid Combination</span></li>
+                                                                    <li><strong>Supplied:</strong>
+                                                                        <div>5 mL suspension / 3.5 g tube</div>
+                                                                    </li>
+                                                                    <li><strong>General Purpose Dosing:</strong>
+                                                                        <div>Generally QID for solutions</div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="white collapsible-header text-center waves-effect">
+                                                                <h2>Zylet</h2>
+                                                                <p class="lead text-muted">Tobramycin 0.3% and loteprednol 0.5%</p>
+                                                            </div>
+                                                            <div class="white collapsible-body" >
+                                                                <ul class="drug">
+                                                                    <li style="list-style:none"><span class="hidden">antibiotics topicals Topical Antibiotic/Steroid Combination</span></li>
+                                                                    <li><strong>Supplied:</strong>
+                                                                        <div>5 &amp; 10 mL suspension</div>
+                                                                    </li>
+                                                                    <li><strong>General Purpose Dosing:</strong>
+                                                                        <div>Generally QID for solutions</div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="white collapsible-header text-center waves-effect">
+                                                                <h2>Blephamide</h2>
+                                                                <p class="lead text-muted">Sodium sulfacetamide 10% and pred acetate 0.2%</p>
+                                                            </div>
+                                                            <div class="white collapsible-body" >
+                                                                <ul class="drug">
+                                                                    <li style="list-style:none"><span class="hidden">antibiotics topicals Topical Antibiotic/Steroid Combination</span></li>
+                                                                    <li><strong>Supplied:</strong>
+                                                                        <div>5 &amp; 10 mL suspension / 3.5 g tube ointment</div>
+                                                                    </li>
+                                                                    <li><strong>General Purpose Dosing:</strong>
+                                                                        <div>Generally QID for solutions</div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="white collapsible-header text-center waves-effect">
+                                                                <h2>Cortisporin</h2>
+                                                                <p class="lead text-muted">Neomycin 0.35%, polymixin B 10,000 u/mL, and hydrocortisone 1%</p>
+                                                            </div>
+                                                            <div class="white collapsible-body" >
+                                                                <ul class="drug">
+                                                                    <li style="list-style:none"><span class="hidden">antibiotics topicals Topical Antibiotic/Steroid Combination</span></li>
+                                                                    <li><strong>Supplied:</strong>
+                                                                        <div>7.5 mL suspension, 3.5 g tube</div>
+                                                                    </li>
+                                                                    <li><strong>General Purpose Dosing:</strong>
+                                                                        <div>Generally QID for solutions</div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="white collapsible-header text-center waves-effect">
+                                                                <h2>FML-S</h2>
+                                                                <p class="lead text-muted">Sodium sulfacetamide 10% and fluorometholone 0.1%</p>
+                                                            </div>
+                                                            <div class="white collapsible-body" >
+                                                                <ul class="drug">
+                                                                    <li style="list-style:none"><span class="hidden">antibiotics topicals Topical Antibiotic/Steroid Combination</span></li>
+                                                                    <li><strong>Supplied:</strong>
+                                                                        <div>5 mL suspension, 3.5 g tube</div>
+                                                                    </li>
+                                                                    <li><strong>General Purpose Dosing:</strong>
+                                                                        <div>Generally QID for solutions</div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="white collapsible-header text-center waves-effect">
+                                                                <h2>Maxitrol</h2>
+                                                                <p class="lead text-muted">Neomycin 0.35%, polymixin B 10,000 u/mL, and dexamethasone 0.1%</p>
+                                                            </div>
+                                                            <div class="white collapsible-body" >
+                                                                <ul class="drug">
+                                                                    <li style="list-style:none"><span class="hidden">antibiotics topicals Topical Antibiotic/Steroid Combination</span></li>
+                                                                    <li><strong>Supplied:</strong>
+                                                                        <div>5 mL suspension, 3.5 g tube</div>
+                                                                    </li>
+                                                                    <li><strong>General Purpose Dosing:</strong>
+                                                                        <div>Generally QID for solutions</div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="white collapsible-header text-center waves-effect">
+                                                                <h2>Poly-Pred</h2>
+                                                                <p class="lead text-muted">Neomycin 0.35%, polymixin B 10,000 u/mL, and pred acetate 1%</p>
+                                                            </div>
+                                                            <div class="white collapsible-body" >
+                                                                <ul class="drug">
+                                                                    <li style="list-style:none"><span class="hidden">antibiotics topicals Topical Antibiotic/Steroid Combination</span></li>
+                                                                    <li><strong>Supplied:</strong>
+                                                                        <div>5 &amp; 10 mL suspension</div>
+                                                                    </li>
+                                                                    <li><strong>General Purpose Dosing:</strong>
+                                                                        <div>Generally QID for solutions</div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="white collapsible-header text-center waves-effect">
+                                                                <h2>Pred-G</h2>
+                                                                <p class="lead text-muted">Gentamicin 0.3% and pred acetate 1%</p>
+                                                            </div>
+                                                            <div class="white collapsible-body" >
+                                                                <ul class="drug">
+                                                                    <li style="list-style:none"><span class="hidden">antibiotics topicals Topical Antibiotic/Steroid Combination</span></li>
+                                                                    <li><strong>Supplied:</strong>
+                                                                        <div>10 mL suspension / 3.5 g tube</div>
+                                                                    </li>
+                                                                    <li><strong>General Purpose Dosing:</strong>
+                                                                        <div>Generally QID for solutions</div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="white collapsible-header text-center waves-effect">
+                                                                <h2>Tobradex ST</h2>
+                                                                <p class="lead text-muted">Tobramycin 0.3% and dexamethasone 0.05%</p>
+                                                            </div>
+                                                            <div class="white collapsible-body" >
+                                                                <ul class="drug">
+                                                                    <li style="list-style:none"><span class="hidden">antibiotics topicals Topical Antibiotic/Steroid Combination</span></li>
+                                                                    <li><strong>Supplied:</strong>
+                                                                        <div>2.5 mL, 5 mL, 10 mL suspension</div>
+                                                                    </li>
+                                                                    <li><strong>General Purpose Dosing:</strong>
+                                                                        <div>Generally QID for solutions</div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header text-center waves-effect grey lighten-5"><span class="badger">3</span>
+                                        <h2>Other</h2></div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="white collapsible list" data-collapsible="accordion">
+                                            <li>
+                                                <div class="white collapsible-header text-center waves-effect">
+                                                    <h2>AzaSite</h2>
+                                                    <p class="lead text-muted">Azithromycin 1%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">antibiotics topicals other</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>1 year</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>2.5 mL soln (viscous)</div>
+                                                        </li>
+                                                        <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                            <div>BID x 2 days then QD x 5 days</div>
+                                                        </li>
+                                                        <li><strong>Ulcer Dosing:</strong>
+                                                            <div>N/R</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="white collapsible-header text-center waves-effect">
+                                                    <h2>Erythromycin</h2>
+                                                    <p class="lead text-muted">Erythromycin 0.5%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">antibiotics topicals other</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>2 months</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>3.5g ointment</div>
+                                                        </li>
+                                                        <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                            <div>Varies</div>
+                                                        </li>
+                                                        <li><strong>Ulcer Dosing:</strong>
+                                                            <div>N/R</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="white collapsible-header text-center waves-effect">
+                                                    <h2>Bacitracin</h2>
+                                                    <p class="lead text-muted">Bacitracin 500 m/g</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">antibiotics topicals other</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>N/A</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>3.5g ointment</div>
+                                                        </li>
+                                                        <li><strong>Conj. / Prophylaxis Dosing:</strong>
+                                                            <div>Varies</div>
+                                                        </li>
+                                                        <li><strong>Ulcer Dosing:</strong>
+                                                            <div>N/R</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header text-center waves-effect grey lighten-3"><span class="badger">5</span>
+                            <h2>Orals</h2></div>
+                        <div class="collapsible-body grey lighten-5" >
+                            <ul class="white collapsible list" data-collapsible="accordion">
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Vibramycin</h2>
+                                        <p class="lead text-muted">Doxycycline</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">antibiotics orals</span></li>
+                                            <li><strong>Uses:</strong>
+                                                <div>(1) antibiotic; (2) anti-seborrheic; (3) anti-collagenase</div>
+                                            </li>
+                                            <li><strong>Dosing and Supply:</strong>
+                                                <div>(1) 100 mg BID x 21 days; (2) 50L100 m g BID or QD for long term (3) 50L100 mg QD</div>
+                                            </li>
+                                            <li><strong>Contraindications / Side Effects:</strong>
+                                                <div>Not used in children under 8 (some say avoid under age 10) or in pregnant women—category D; interferes with blood clotting (Coumadin); increases photosensitivity; diarrhea common; intracranial HTN risk</div>
+                                            </li>
+                                            <li><strong>Other Pearls:</strong>
+                                                <div>Not effective against most strains of Strep; reduces MMPs &amp; proLinflammatory IL; not affected by food or dairy (unlike other tetracyclines)</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Dicloxacillin</h2>
+                                        <p class="lead text-muted">Dicloxacillin</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">antibiotics orals</span></li>
+                                            <li><strong>Uses:</strong>
+                                                <div>Infectious lid disease, esp when caused by gram +</div>
+                                            </li>
+                                            <li><strong>Dosing and Supply:</strong>
+                                                <div>Adult: 250 mg QID
+                                                    <br>Kid &gt; 40kg: 125 mg QID
+                                                    <br>Kid &lt; 40 kg: 3.15 - 6.25 mg/kg QID</div>
+                                            </li>
+                                            <li><strong>Contraindications / Side Effects:</strong>
+                                                <div>Type 1 hypersensitivity - itching, swelling, anaphylaxis
+                                                    <br>Type 2 - hemolytic anemia
+                                                    <br>Type 3 - intestinal nephritis, vasculitis, serum sickness
+                                                    <br>Type 4 - Steven's Johnson, contact dermatitis
+                                                    <br>Alters normal flora causing nausea, vomiting, diarrhea (pseudomembraneous colitis)
+                                                    <br>Renders birth control ineffective</div>
+                                            </li>
+                                            <li><strong>Other Pearls:</strong>
+                                                <div>Penicillin family; 10% allergy prevalence; Gram + coverage; may cross react w/ cephalosporins</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Augmentin</h2>
+                                        <p class="lead text-muted">Amoxicillin + Clavulanate</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">antibiotics orals</span></li>
+                                            <li><strong>Uses:</strong>
+                                                <div>Pediatric infectious disease</div>
+                                            </li>
+                                            <li><strong>Dosing and Supply:</strong>
+                                                <div>200, 250, 400 chewable; suspension; 250-500, 875 amox + 125 clav. Adult dosing 250 mg TID or 500 or 875 BID</div>
+                                            </li>
+                                            <li><strong>Contraindications / Side Effects:</strong>
+                                                <div>Type 1 hypersensitivity - itching, swelling, anaphylaxis
+                                                    <br>Type 2 - hemolytic anemia
+                                                    <br>Type 3 - intestinal nephritis, vasculitis, serum sickness
+                                                    <br>Type 4 - Steven's Johnson, contact dermatitis
+                                                    <br>Alters normal flora causing nausea, vomiting, diarrhea (pseudomembraneous colitis)
+                                                    <br>Renders birth control ineffective</div>
+                                            </li>
+                                            <li><strong>Other Pearls:</strong>
+                                                <div>Contains penicillin; Clavulanate is B-lactamase inhibitor; effective against gram + and H. flu</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Zithromax</h2>
+                                        <p class="lead text-muted">Azithromycin</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">antibiotics orals</span></li>
+                                            <li><strong>Uses:</strong>
+                                                <div>General purpose antibiotic, may also be anti-inflammatory; tx of choice for chlamydial disease</div>
+                                            </li>
+                                            <li><strong>Dosing and Supply:</strong>
+                                                <div>Suspension; "Z pack"=6 x 250 mg tabs; "tri-pack"=3 x 1 g tabs; 250, 500 mg tabs</div>
+                                            </li>
+                                            <li><strong>Contraindications / Side Effects:</strong>
+                                                <div>GI upset, rash, dizziness. Avoid in heart arrhythmia and blood dyscrasias; use with caution in liver/kidney problems</div>
+                                            </li>
+                                            <li><strong>Other Pearls:</strong>
+                                                <div>N/A</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Keflex</h2>
+                                        <p class="lead text-muted">Cephalexin</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">antibiotics orals</span></li>
+                                            <li><strong>Uses:</strong>
+                                                <div>Preseptal cellulitis, internal hordeolum</div>
+                                            </li>
+                                            <li><strong>Dosing and Supply:</strong>
+                                                <div>Adults 250 mg QID, children 20-50 mg/kg/day in 3-4 divided doses</div>
+                                            </li>
+                                            <li><strong>Contraindications / Side Effects:</strong>
+                                                <div>Cross-sensitivity to penicillin allergies so use caution in these patients; diarrhea/GI upset common</div>
+                                            </li>
+                                            <li><strong>Other Pearls:</strong>
+                                                <div>First generation cephalosporin</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header text-center waves-effect grey lighten-1 waves-light">
+                <h2>Antivirals</h2><i class="fa fa-2x fa-chevron-up"></i></div>
+            <div class="collapsible-body grey lighten-3">
+                <ul class="grey lighten-3 collapsible list" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header text-center waves-effect grey lighten-3"><span class="badger">2</span>
+                            <h2>Topicals</h2></div>
+                        <div class="collapsible-body grey lighten-5" >
+                            <ul class="grey lighten-5 collapsible list" data-collapsible="accordion">
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Viroptic</h2>
+                                        <p class="lead text-muted">Trifluridine 1%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">antivirals topicals</span></li>
+                                            <li><strong>Pediatric Uses:</strong>
+                                                <div>6 years</div>
+                                            </li>
+                                            <li><strong>Dosing and Supply:</strong>
+                                                <div>7.5 mL soln</div>
+                                            </li>
+                                            <li><strong>Conj / Prophylaxis Dosing:</strong>
+                                                <div>QID</div>
+                                            </li>
+                                            <li><strong>Corneal Dendrite Dosing:</strong>
+                                                <div>Q2h up to 9x/day, taper, max 21 days</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Zirgan</h2>
+                                        <p class="lead text-muted">Ganciclovir gel 0.15%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">antivirals topicals</span></li>
+                                            <li><strong>Pediatric Uses:</strong>
+                                                <div>2 years</div>
+                                            </li>
+                                            <li><strong>Dosing and Supply:</strong>
+                                                <div>5 g tube</div>
+                                            </li>
+                                            <li><strong>Conj / Prophylaxis Dosing:</strong>
+                                                <div>TID * off label</div>
+                                            </li>
+                                            <li><strong>Corneal Dendrite Dosing:</strong>
+                                                <div>5x / day</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header text-center waves-effect grey lighten-3"><span class="badger">3</span>
+                            <h2>Orals</h2></div>
+                        <div class="collapsible-body grey lighten-5" >
+                            <ul class="grey lighten-5 collapsible list" data-collapsible="accordion">
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Zovirax</h2>
+                                        <p class="lead text-muted">Acyclovir</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">antivirals orals</span></li>
+                                            <li><strong>Uses:</strong>
+                                                <div>Herpes simplex and herpes zoster</div>
+                                            </li>
+                                            <li><strong>Dosing and Supply:</strong>
+                                                <div>Simplex*: 400 mg 5x/day; zoster: 1 g TID x 7 days</div>
+                                            </li>
+                                            <li><strong>Contraindications and Side Effects:</strong>
+                                                <div>GI upset; use with caution in elderly patients and pts with kidney disorders</div>
+                                            </li>
+                                            <li><strong>Other Pearls:</strong>
+                                                <div>Relatively inexpensive generic</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Valtrex</h2>
+                                        <p class="lead text-muted">Valacyclovir</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">antivirals orals</span></li>
+                                            <li><strong>Uses:</strong>
+                                                <div>Herpes simplex and herpes zoster</div>
+                                            </li>
+                                            <li><strong>Dosing and Supply:</strong>
+                                                <div>Simplex*: 1 g BID x 7 days; zoster: 1 g TID x 7 days</div>
+                                            </li>
+                                            <li><strong>Contraindications and Side Effects:</strong>
+                                                <div>GI upset; use with caution in elderly patients and pts with kidney disorders</div>
+                                            </li>
+                                            <li><strong>Other Pearls:</strong>
+                                                <div>Available generic but more expensive than generic acyclovir</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Famvir</h2>
+                                        <p class="lead text-muted">Famciclovir</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">antivirals orals</span></li>
+                                            <li><strong>Uses:</strong>
+                                                <div>Herpes simplex and herpes zoster</div>
+                                            </li>
+                                            <li><strong>Dosing and Supply:</strong>
+                                                <div>Simplex*: not established; zoster: 500 mg TID x 7 days</div>
+                                            </li>
+                                            <li><strong>Contraindications and Side Effects:</strong>
+                                                <div>GI upset; use with caution in elderly patients and pts with kidney disorders</div>
+                                            </li>
+                                            <li><strong>Other Pearls:</strong>
+                                                <div>Available generic but more expensive than generic acyclovir</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header text-center waves-effect grey lighten-1 waves-light">
+                <h5>Antihistamines/Anti-Inflammatory/Analgesics</h5><i class="fa fa-2x fa-chevron-up"></i></div>
+            <div class="collapsible-body grey lighten-3">
+                <ul class="grey lighten-3 collapsible list" data-collapsible="accordion">
+					<li>
+                        <div class="collapsible-header text-center waves-effect grey lighten-3">
+                            <h2>Topicals</h2></div>
+                        <div class="collapsible-body grey lighten-5">
+                            <ul class="grey lighten-5 collapsible list" data-collapsible="accordion">
+                                <li>
+                                    <div class="collapsible-header text-center waves-effect grey lighten-5"><span class="badger">2</span>
+                                        <h2>H1 Antihistamines</h2></div>
+                                    <div class="white collapsible-body">
+                                        <ul class="grey lighten-5 collapsible list" data-collapsible="accordion">
+                                            <li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Emadine</h2>
+                                                    <p class="lead text-muted">Emedastine 0.05%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics topicals H1</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>3 years</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>5 mL bottle</div>
+                                                        </li>
+                                                        <li><strong>Dosing:</strong>
+                                                            <div>QID</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Avil</h2>
+                                                    <p class="lead text-muted">Pheniramine Maleate</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics topicals H1</span></li>
+                                                        <li><strong>Use:</strong>
+                                                            <div>Ingredient in Visine A</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header text-center waves-effect grey lighten-5"><span class="badger">4</span>
+                                        <h2>Mast Cell Stabilizers</h2></div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="grey lighten-5 collapsible list" data-collapsible="accordion">
+                                            <li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Crolom</h2>
+                                                    <p class="lead text-muted">Cromolyn Sodium 4%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics topicals mast cell stabilizers</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>4 years</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>10 mL bottle</div>
+                                                        </li>
+                                                        <li><strong>Dosing:</strong>
+                                                            <div>QID</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Alomide</h2>
+                                                    <p class="lead text-muted">Lodoxamide 0.1%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics topicals mast cell stabilizers</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>2 years</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>10 mL</div>
+                                                        </li>
+                                                        <li><strong>Dosing:</strong>
+                                                            <div>QID</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+											<li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Alamast</h2>
+                                                    <p class="lead text-muted">Pemirolast 0.1%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics topicals mast cell stabilizers</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>3 years</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>10 mL</div>
+                                                        </li>
+                                                        <li><strong>Dosing:</strong>
+                                                            <div>QID</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+											<li>
+                                                <div class="collapsible-header text-center waves-effect off-white">
+                                                    <h2>Alocril</h2>
+                                                    <p class="lead text-muted">Nedocromil 2%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics topicals mast cell stabilizers</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>3 years</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>5 mL</div>
+                                                        </li>
+                                                        <li><strong>Dosing:</strong>
+                                                            <div>BID</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header text-center waves-effect grey lighten-5"><span class="badger">8</span>
+                                        <h2>Combination</h2></div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="white collapsible list" data-collapsible="accordion">
+                                            <li>
+                                                <div class="white collapsible-header text-center waves-effect">
+                                                    <h2>Lastacaft</h2>
+                                                    <p class="lead text-muted">Alcaftadine 0.25%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics topicals combination</span></li>
+														<li><strong>Pediatric Use:</strong>
+                                                            <div>2 years</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>3 mL</div>
+                                                        </li>
+                                                        <li><strong>Dosing:</strong>
+                                                            <div>QD</div>
+                                                        </li>
+														<li><strong>Other:</strong>
+                                                            <div>Pregnancy Category B</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="white collapsible-header text-center waves-effect">
+                                                    <h2>Optivar</h2>
+                                                    <p class="lead text-muted">Azelastine 0.05%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics topicals combination</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>3 years</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>6 mL</div>
+                                                        </li>
+                                                        <li><strong>Dosing:</strong>
+                                                            <div>BID</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+											<li>
+                                                <div class="white collapsible-header text-center waves-effect">
+                                                    <h2>Bepreve</h2>
+                                                    <p class="lead text-muted">Bepotastine 1.5%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics topicals combination</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>2 years</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>5, 10 mL</div>
+                                                        </li>
+                                                        <li><strong>Dosing:</strong>
+                                                            <div>BID</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>	
+											<li>
+                                                <div class="white collapsible-header text-center waves-effect">
+                                                    <h2>Elestat</h2>
+                                                    <p class="lead text-muted">Epinastine 0.05%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics topicals combination</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>3 years</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>5 mL</div>
+                                                        </li>
+                                                        <li><strong>Dosing:</strong>
+                                                            <div>BID</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+											<li>
+                                                <div class="white collapsible-header text-center waves-effect">
+                                                    <h2>Zaditor</h2>
+                                                    <p class="lead text-muted">Ketotifen 0.025%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics topicals combination</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>3 years</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>5 mL</div>
+                                                        </li>
+                                                        <li><strong>Dosing:</strong>
+                                                            <div>BID; OTC</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>	
+											<li>
+                                                <div class="white collapsible-header text-center waves-effect">
+                                                    <h2>Patanol</h2>
+                                                    <p class="lead text-muted">Olopatadine 0.1%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics topicals combination</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>3 years</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>5 mL</div>
+                                                        </li>
+                                                        <li><strong>Dosing:</strong>
+                                                            <div>BID</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+											<li>
+                                                <div class="white collapsible-header text-center waves-effect">
+                                                    <h2>Pataday</h2>
+                                                    <p class="lead text-muted">Olopatadine 0.2%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics topicals combination</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>3 years</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>2.5 mL</div>
+                                                        </li>
+                                                        <li><strong>Dosing:</strong>
+                                                            <div>QD</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+											<li>
+                                                <div class="white collapsible-header text-center waves-effect">
+                                                    <h2>Pazeo</h2>
+                                                    <p class="lead text-muted">Olopatadine 0.7%</p>
+                                                </div>
+                                                <div class="white collapsible-body" >
+                                                    <ul class="drug">
+                                                        <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics topicals combination</span></li>
+                                                        <li><strong>Pediatric Use:</strong>
+                                                            <div>2 years</div>
+                                                        </li>
+                                                        <li><strong>Supplied:</strong>
+                                                            <div>2.5 mL</div>
+                                                        </li>
+                                                        <li><strong>Dosing:</strong>
+                                                            <div>QD</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>											
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header text-center waves-effect grey lighten-3"><span class="badger">5</span>
+                            <h2>Orals</h2></div>
+                        <div class="collapsible-body grey lighten-5" >
+                            <ul class="grey lighten-5 collapsible list" data-collapsible="accordion">
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Zyrtec</h2>
+                                        <p class="lead text-muted">Cetirizine HCl</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics orals</span></li>
+                                            <li><strong>Uses:</strong>
+                                                <div>Allergy related symptoms</div>
+                                            </li>
+                                            <li><strong>Dosing and Supply:</strong>
+                                                <div>5 mg and 10 mg / Adults 10 mg QD</div>
+                                            </li>
+                                            <li><strong>Contraindications and Side Effects:</strong>
+                                                <div>Drowsiness; dry mouth; tiredness; sleep disturbances; dry eye</div>
+                                            </li>
+                                            <li><strong>Other Pearls:</strong>
+                                                <div>N/A</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Prednisone</h2>
+                                        <p class="lead text-muted">Prednisone</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics orals</span></li>
+                                            <li><strong>Uses:</strong>
+                                                <div>Inflammation not responsive to non-pharm or nonsteroidal therapy</div>
+                                            </li>
+                                            <li><strong>Dosing and Supply:</strong>
+                                                <div>Ranges from 5 - 100 mg/day depending on severity of disease</div>
+                                            </li>
+                                            <li><strong>Contraindications and Side Effects:</strong>
+                                                <div>Psychosis; GI ulcers; diabetes; HTN; immunosuppression; chronic renal failure; systemic infection; others - consult reliable reference</div>
+                                            </li>
+                                            <li><strong>Other Pearls:</strong>
+                                                <div>Requires strict tapering schedule to avoid side effects esp rebound</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Motrin</h2>
+                                        <p class="lead text-muted">Ibuprofen</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics orals</span></li>
+                                            <li><strong>Uses:</strong>
+                                                <div>Analgesic, anti-pyretic, anti-inflammatory NSAID</div>
+                                            </li>
+                                            <li><strong>Dosing and Supply:</strong>
+                                                <div>200 - 800 mg caplets; 200 - 400 mg q 4-6 h for antipyretic and analgesia; 600-800 mg q 4-6 h for anti-inflammatory activity</div>
+                                            </li>
+                                            <li><strong>Contraindications and Side Effects:</strong>
+                                                <div>GI: Gastric ulcer/bleeding. Alert patients to d/c use if GI upset is prolonged or intense. Not recommended in bledding disorders or pts taking Coumadin or similar</div>
+                                            </li>
+                                            <li><strong>Other Pearls:</strong>
+                                                <div>IBU is available generically or OTC in 200 mg caplets / capsules / gelcaps</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Tylenol III</h2>
+                                        <p class="lead text-muted">30 mg codeine with 300 mg acetaminophen</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics orals</span></li>
+                                            <li><strong>Uses:</strong>
+                                                <div>Category III scheduled drug (need DEA cetrtification to Rx) for significant pain not otherwise controlled with NSAIDs</div>
+                                            </li>
+                                            <li><strong>Dosing and Supply:</strong>
+                                                <div>1-2 tabs every 4-6 hours, not to exceed</div>
+                                            </li>
+                                            <li><strong>Contraindications and Side Effects:</strong>
+                                                <div>Drug dependency or h/o substance abuse; asthma, COPD, liver/kidney dysfunction; can cause nausea, itching/rash, delirium, seizures, cardiotoxicity</div>
+                                            </li>
+                                            <li><strong>Other Pearls:</strong>
+                                                <div>Several studies show no relative advantage of T-III over 800 mg IBU in pain management. Use only if safer drugs are ineffective</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Tramadol</h2>
+                                        <p class="lead text-muted">Ultram, others</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Antihistamines/Anti-Inflammatory/Analgesics orals</span></li>
+                                            <li><strong>Uses:</strong>
+                                                <div>Non scheduled drug but has risk of dependency due to weak mu-opioid receptor agonist activity</div>
+                                            </li>
+                                            <li><strong>Dosing and Supply:</strong>
+                                                <div>50-100 mg PO q 4-6 hours PRN; not to exceed 400 mg/day (immediate release, adult dose)</div>
+                                            </li>
+                                            <li><strong>Contraindications and Side Effects:</strong>
+                                                <div>Drug dependency, allergy or sensitivity to opiates, severe renal/kidney impairment</div>
+                                            </li>
+                                            <li><strong>Other Pearls:</strong>
+                                                <div>N/A</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header text-center waves-effect grey lighten-1 waves-light">
+                <h2>NSAIDs</h2><i class="fa fa-2x fa-chevron-up"></i></div>
+            <div class="collapsible-body grey lighten-3">
+                <ul class="grey lighten-3 collapsible list" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header text-center waves-effect blue-grey lighten-4"><span class="badger">6</span>
+                            <h2>Topicals</h2></div>
+                        <div class="collapsible-body grey lighten-5" >
+                            <ul class="grey lighten-5 collapsible list" data-collapsible="accordion">
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Acular LS</h2>
+                                        <p class="lead text-muted">Ketorolac tromethamine 0.4%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">NSAIDs topicals</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>5 mL</div>
+                                            </li>
+                                            <li><strong>General Dosing Schedule:</strong>
+                                                <div>QID</div>
+                                            </li>
+                                            <li><strong>Other Info:</strong>
+                                                <div>Pediatric use 3 years</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Acuvail</h2>
+                                        <p class="lead text-muted">Ketorolac tromethamine 0.45%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">NSAIDs topicals</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>Unit dose</div>
+                                            </li>
+                                            <li><strong>General Dosing Schedule:</strong>
+                                                <div>BID</div>
+                                            </li>
+                                            <li><strong>Other Info:</strong>
+                                                <div>N/A (safety and efficacy not established)</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Ilevro</h2>
+                                        <p class="lead text-muted">Nepafenac 0.3%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">NSAIDs topicals</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>1.7 mL</div>
+                                            </li>
+                                            <li><strong>General Dosing Schedule:</strong>
+                                                <div>QD</div>
+                                            </li>
+                                            <li><strong>Other Info:</strong>
+                                                <div>10 years</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Nevanac</h2>
+                                        <p class="lead text-muted">Nepafenac 0.1%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">NSAIDs topicals</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>3 mL</div>
+                                            </li>
+                                            <li><strong>General Dosing Schedule:</strong>
+                                                <div>TID</div>
+                                            </li>
+                                            <li><strong>Other Info:</strong>
+                                                <div>10 years</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Prolensa</h2>
+                                        <p class="lead text-muted">Bromfenac</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">NSAIDs topicals</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>1.6, 3 mL</div>
+                                            </li>
+                                            <li><strong>General Dosing Schedule:</strong>
+                                                <div>QD</div>
+                                            </li>
+                                            <li><strong>Other Info:</strong>
+                                                <div>N/A</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Voltaren</h2>
+                                        <p class="lead text-muted">Diclofenac sodium 0.1%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">NSAIDs topicals</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>2.5, 5 mL</div>
+                                            </li>
+                                            <li><strong>General Dosing Schedule:</strong>
+                                                <div>QID</div>
+                                            </li>
+                                            <li><strong>Other Info:</strong>
+                                                <div>N/A</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header text-center waves-effect grey lighten-1 waves-light">
+                <h2>Steroids</h2><i class="fa fa-2x fa-chevron-up"></i></div>
+            <div class="collapsible-body">
+                <ul class="pink lighten-4 collapsible list" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header text-center waves-effect pink lighten-4"><span class="badger">8</span>
+                            <h2>Topicals</h2></div>
+                        <div class="collapsible-body grey lighten-5" >
+                            <ul class="grey lighten-5 collapsible list" data-collapsible="accordion">
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Durezol</h2>
+                                        <p class="lead text-muted">Difluprednate 0.05%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Steroids topicals</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>Emulsion, 5 mL</div>
+                                            </li>
+                                            <li><strong>General Dosing Schedule:</strong>
+                                                <div>Usually QD - QID</div>
+												<div>QID &rarr; Uveitis</div>
+                                            </li>
+                                            <li><strong>Other Info:</strong>
+                                                <div>May cause more rapid and severe IOP spikes</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Pred Forte</h2>
+                                        <p class="lead text-muted">Prednisone acetate 1%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Steroids topicals</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>5 - 10 - 15 mL bottle suspension</div>
+                                            </li>
+                                            <li><strong>General Dosing Schedule:</strong>
+                                                <div>Varies</div>
+												<div>Q1H &rarr; Uveitis, taper to Q2H to QID over first several days.</div>
+												<div>QID &rarr; Herpes simplex stromal keratitis</div>
+                                            </li>
+                                            <li><strong>Other Info:</strong>
+                                                <div>Shake before use! Traditionally 'gold standard' for intraocular inflammation</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Alrex</h2>
+                                        <p class="lead text-muted">Loteprednol etabonate 0.2%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Steroids topicals</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>5 - 10 mL</div>
+                                            </li>
+                                            <li><strong>General Dosing Schedule:</strong>
+                                                <div>Varies, usually BID - QID</div>
+                                            </li>
+                                            <li><strong>Other Info:</strong>
+                                                <div>N/A</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Lotemax Gel, Ointment, Suspension</h2>
+                                        <p class="lead text-muted">Loteprednol etabonate 0.5%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Steroids topicals</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>Drops 5-10-15 mL
+                                                    <br>Gel 5g bottle
+                                                    <br>Ung 3.5g tube</div>
+                                            </li>
+                                            <li><strong>General Dosing Schedule:</strong>
+                                                <div>Varies</div>
+                                                <div>QID &rarr; Episcleritis/Pingueculitis x 5-7 days</div>
+												<div>QID x 2 days, BID x 4 - 8 weeks allergic conjunctivitis</div>
+                                            </li>
+                                            <li><strong>Other Info:</strong>
+                                                <div>Gel is a 'drop' - don't blink after instillation to allow to 'gel' on surface
+                                                    <br>Ung is nonpreserved and ideal for overnight use</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Inflammase Forte</h2>
+                                        <p class="lead text-muted">Prednisolone sodium phosphate 1%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Steroids topicals</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>5-10-15 mL</div>
+                                            </li>
+                                            <li><strong>General Dosing Schedule:</strong>
+                                                <div>Varies</div>
+                                            </li>
+                                            <li><strong>Other Info:</strong>
+                                                <div>Does not penetrate the cornea as rapidly, best for surface disease</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Inflammase Mild</h2>
+                                        <p class="lead text-muted">Prednisolone sodium phosphate 0.12%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Steroids topicals</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>5-10 mL</div>
+                                            </li>
+                                            <li><strong>General Dosing Schedule:</strong>
+                                                <div>Varies, usually QID or less</div>
+                                            </li>
+                                            <li><strong>Other Info:</strong>
+                                                <div>Poor penetration</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>FML</h2>
+                                        <p class="lead text-muted">Fluorometholone alcohol 0.1%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Steroids topicals</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>5-10-15 mL suspension
+                                                    <br>3.5g ung</div>
+                                            </li>
+                                            <li><strong>General Dosing Schedule:</strong>
+                                                <div>Varies</div>
+                                            </li>
+                                            <li><strong>Other Info:</strong>
+                                                <div>Sometimes used after refractive surgery</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Pred Mild</h2>
+                                        <p class="lead text-muted">Prednisolone acetate 0.12%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Steroids topicals</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>5-10 mL</div>
+                                            </li>
+                                            <li><strong>General Dosing Schedule:</strong>
+                                                <div>Varies, usually QID or less</div>
+                                            </li>
+                                            <li><strong>Other Info:</strong>
+                                                <div>N/A</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header text-center waves-effect grey lighten-1 waves-light">
+                <h2>Glaucoma</h2><i class="fa fa-2x fa-chevron-up"></i></div>
+            <div class="collapsible-body grey lighten-3">
+                <ul class="grey lighten-3 collapsible list" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header text-center waves-effect lighten-3 teal"><span class="badger">4</span>
+                            <h2>Prostaglandins</h2></div>
+                        <div class="collapsible-body lighten-5 teal" >
+                            <ul class="collapsible list lighten-5 teal" data-collapsible="accordion">
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Xalatan</h2>
+                                        <p class="lead text-muted">Latanoprost 0.005%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma prostaglandins</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>2.5 mL</div>
+                                            </li>
+											<li><strong>Dosing:</strong>
+                                                <div>QD HS (once at bedtime)</div>
+                                            </li>
+                                            <li><strong>Effective:</strong>
+                                                <div>3-5 weeks for full pressire lowering effects</div>
+                                            </li>
+                                            <li><strong>Characteristics:</strong>
+                                                <div>Mean IOP reduction: 27 - 33.7% (can exceed 50%)
+                                                    <br>
+                                                    <br>Only generic PGA</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Travatan Z</h2>
+                                        <p class="lead text-muted">Travoprost 0.004%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma prostaglandins</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>2.5, 5 mL</div>
+                                            </li>
+											<li><strong>Dosing:</strong>
+                                                <div>QD HS</div>
+                                            </li>
+                                            <li><strong>Effective:</strong>
+                                                <div>2 weeks for full IOP lowering effect</div>
+                                            </li>
+                                            <li><strong>Characteristics:</strong>
+                                                <div>Sustained 30% IOP reduction at all times tested
+                                                    <br>
+                                                    <br>Preserved w/ Sofzia &roarr; more gentle to ocular surface than BAK</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Lumigan</h2>
+                                        <p class="lead text-muted">Bimatoprost 0.03% (Latisse) &amp; 0.01%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma prostaglandins</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>2.5, 5, 7.5 mL</div>
+                                            </li>
+											<li><strong>Dosing:</strong>
+                                                <div>QD HS</div>
+                                            </li>
+                                            <li><strong>Effective:</strong>
+                                                <div>Very fast effects, usually within a few days</div>
+                                            </li>
+                                            <li><strong>Characteristics:</strong>
+                                                <div>Lumigan 0.01% as efficaceous as Lumigan 0.03% but with lesser hyperemia
+                                                    <br>
+                                                    <br>Increased concentration of preservative (BAK) - "roughens up" the epithelium to enhancecorneal penetration</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Zioptan</h2>
+                                        <p class="lead text-muted">Tafluprost 0.0015%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma prostaglandins</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>Unit dose</div>
+                                            </li>
+											<li><strong>Dosing:</strong>
+                                                <div>QD</div>
+                                            </li>
+                                            <li><strong>Effective:</strong>
+                                                <div>N/A</div>
+                                            </li>
+                                            <li><strong>Characteristics:</strong>
+                                                <div>Non preserved
+                                                    <br>
+                                                    <br>Niche product, corneal friendly</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header text-center waves-effect lighten-3 green"><span class="badger">1</span>
+                            <h2>Miotics</h2></div>
+                        <div class="collapsible-body lighten-5 green" >
+                            <ul class="collapsible list lighten-5 green" data-collapsible="accordion">
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Pilocarpine</h2>
+                                        <p class="lead text-muted"></p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma miotics</span></li>
+                                            <li><strong>Dosing:</strong>
+                                                <div>QID
+                                                    <br>
+                                                    <br>Concentrations: 1%, 2%, 4%</div>
+                                            </li>
+                                            <li><strong>Effective:</strong>
+                                                <div>4 - 8 hours</div>
+                                            </li>
+                                            <li><strong>Characteristics:</strong>
+                                                <div>Oldest anti-glaucoma medication</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header text-center waves-effect lighten-3 purple"><span class="badger">3</span>
+                            <h2>Alpha-2 Adrenergic Agonists</h2></div>
+                        <div class="collapsible-body lighten-5 purple" >
+                            <ul class="collapsible list lighten-5 purple" data-collapsible="accordion">
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Propine</h2>
+                                        <p class="lead text-muted">Dipivefrin 0.1%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma Alpha-2 Adrenergic Agonists</span></li>
+											<li><strong>Dosing:</strong>
+                                                <div>BID</div>
+                                            </li>
+                                            <li><strong>Effective:</strong>
+                                                <div>Avoid in apakes and pseudophakes due to cystoid macular edema</div>
+                                            </li>
+                                            <li><strong>Characteristics:</strong>
+                                                <div>Avoided due to weak actions on lowering IOP
+                                                    <br>
+                                                    <br>Causes pigment spots in palpebral conj.</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Apraclonidine 0.5% &amp; 1%</h2>
+                                        <p class="lead text-muted">Iopidine 0.5% &amp; 1%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma Alpha-2 Adrenergic Agonists</span></li>
+                                            <li><strong>Dosing:</strong>
+                                                <div>TID</div>
+                                            </li>
+                                            <li><strong>Effective:</strong>
+                                                <div>Only for short term pressure reduction</div>
+                                            </li>
+                                            <li><strong>Characteristics:</strong>
+                                                <div>Inhibits release of NE leading to a reduce in sympathetic activity in CB reducing aqueous production
+                                                    <br>
+                                                    <br>1% used during laser sx to prevent IOP spike
+                                                    <br>
+                                                    <br>0.5% used for POAG management
+                                                    <br>
+                                                    <br>Virtually never used in chronic glaucoma therapy</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Alphagan P &amp; Alphagan 0.2% and 0.15% (generic only)</h2>
+                                        <p class="lead text-muted">Brimonidine tartrate 0.15% &amp; 0.1%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma Alpha-2 Adrenergic Agonists</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>5, 10, 15 mL</div>
+                                            </li>
+											<li><strong>Dosing:</strong>
+                                                <div>TID
+                                                    <br>
+                                                    <br>Patients on polytherapy may be able to get away with BID dosing</div>
+                                            </li>
+                                            <li><strong>Effective:</strong>
+                                                <div>Do not use in smaller patients or children - relative CI</div>
+                                            </li>
+                                            <li><strong>Characteristics:</strong>
+                                                <div>Alphagan 0.2% &roarr; generic only &roarr; preserved with BAK
+                                                    <br>
+                                                    <br>Alphagan P preserved with Purite
+                                                    <br>
+                                                    <br>Most significant side effects: drowsiness, fatigue, dry mouth. Can induce fatigue and even coma in children (crosses BBB)
+                                                    <br>
+                                                    <br>No lowering effects at night</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header text-center waves-effect beta-blockers"><span class="badger">6</span>
+                            <h2>Beta Blockers</h2></div>
+                        <div class="collapsible-body" >
+                            <ul class="collapsible list" data-collapsible="accordion">
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Timoptic</h2>
+                                        <p class="lead text-muted">Timolol maleate 0.25% &amp; 0.5%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma beta blocker beta adrenergic agonist</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>5, 10, 15 mL</div>
+                                            </li>
+											<li><strong>Dosing:</strong>
+                                                <div>BID</div>
+                                            </li>
+                                            <li><strong>Characteristics:</strong>
+                                                <div>Non-selective
+                                                    <br>
+                                                    <br>Most popular beta blocker
+                                                    <br>
+                                                    <br>Timoptic XE (gel forming solution) designed for QD use</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Istalol</h2>
+                                        <p class="lead text-muted">Timolol maleate 0.5%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma beta blocker beta adrenergic agonist</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>2.5, 5 mL</div>
+                                            </li>
+											<li><strong>Dosing:</strong>
+                                                <div>QD</div>
+                                            </li>
+                                            <li><strong>Characteristics:</strong>
+                                                <div>Not generically available
+                                                    <br>
+                                                    <br>New and not especially impressive</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Betimol</h2>
+                                        <p class="lead text-muted">Timolol hemihydrate 0.25% &amp; 0.5%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma beta blocker beta adrenergic agonist</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>5, 10, 15 mL</div>
+                                            </li>
+											<li><strong>Dosing:</strong>
+                                                <div>BID</div>
+                                            </li>
+                                            <li><strong>Characteristics:</strong>
+                                                <div>N/A</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Levobunolol 0.25% &amp; 0.5%</h2>
+                                        <p class="lead text-muted"></p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma beta blocker beta adrenergic agonist</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>5, 10, 15 mL</div>
+                                            </li>
+											<li><strong>Dosing:</strong>
+                                                <div>BID</div>
+                                            </li>
+                                            <li><strong>Characteristics:</strong>
+                                                <div>Brand name Betagan no longer available; only available as generic
+                                                    <br>
+                                                    <br>Clinically equivalent to Timoptic</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Betaxolol</h2>
+                                        <p class="lead text-muted">Betoptic S 0.25%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma beta blocker beta adrenergic agonist</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>5, 10, 15 mL</div>
+                                            </li>
+											<li><strong>Dosing:</strong>
+                                                <div>BID</div>
+                                            </li>
+                                            <li><strong>Characteristics:</strong>
+                                                <div>Beta 1 selective: no pulmonary side effects although may still exacerbate asthma
+                                                    <br>
+                                                    <br>Generic</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Ocupress</h2>
+                                        <p class="lead text-muted">Carteolol 1%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma beta blocker beta adrenergic agonist</span></li>
+                                            <li><strong>Dosing:</strong>
+                                                <div>BID</div>
+                                            </li>
+                                            <li><strong>Characteristics:</strong>
+                                                <div>Intrinsic sympathomimetic activity (ISA) and transient agonist activity
+                                                    <br>
+                                                    <br>Least likely to cause bradycardia and bronchospasm
+                                                    <br>
+                                                    <br>Generic</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header text-center waves-effect lighten-3 orange"><span class="badger">4</span>
+                            <h2>Carbonic Anhydrase Inhibitors</h2></div>
+                        <div class="collapsible-body" >
+                            <ul class="collapsible list" data-collapsible="accordion">
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Acetazolamide</h2>
+                                        <p class="lead text-muted">Diamox</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma Carbonic Anhydrase Inhibitors</span></li>
+                                            <li><strong>Description:</strong>
+                                                <div>Oral
+                                                    <br>
+                                                    <br>1000mg QD po
+                                                    <br>
+                                                    <br>Used for short term pressure reduction</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Methazolamide</h2>
+                                        <p class="lead text-muted">Neptazane</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma Carbonic Anhydrase Inhibitors</span></li>
+                                            <li><strong>Description:</strong>
+                                                <div>Oral
+                                                    <br>
+                                                    <br>25mg BID up to 50mg TID max
+                                                    <br>
+                                                    <br>Side effects similar to acetazolamide, but more tolerated</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Dorzolamide</h2>
+                                        <p class="lead text-muted">Trusopt 2%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma Carbonic Anhydrase Inhibitors</span></li>
+                                            <li><strong>Description:</strong>
+                                                <div>Topical
+                                                    <br>
+                                                    <br>Stings due to low pH
+                                                    <br>
+                                                    <br>TID
+                                                    <br>
+                                                    <br>Slightly less effective in dark irides
+                                                    <br>
+                                                    <br>Generic</div>
+                                            </li>
+											<li><strong>How Supplied:</strong>
+                                                <div>5, 10 mL</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Brinzolamide Opthalmic Suspension 1%</h2>
+                                        <p class="lead text-muted">Azopt</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma Carbonic Anhydrase Inhibitors</span></li>
+                                            <li><strong>Description:</strong>
+                                                <div>Topical
+                                                    <br>
+                                                    <br>Closer to physiological pH; less stinging
+                                                    <br>
+                                                    <br>TID</div>
+                                            </li>
+											<li><strong>How Supplied:</strong>
+                                                <div>5, 10, 15 mL</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header text-center waves-effect lighten-3 grey"><span class="badger">2</span>
+                            <h2>Combination agents</h2></div>
+                        <div class="collapsible-body" >
+                            <ul class="collapsible list" data-collapsible="accordion">
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Cosopt</h2>
+                                        <p class="lead text-muted">Timoptic (Timolol) 0.5% &amp; Trusopt (Dorzolamide) 2%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma Combination agents</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>5, 10 mL</div>
+                                            </li>
+											<li><strong>Dosing:</strong>
+                                                <div>BID</div>
+                                            </li>
+                                            <li><strong>Description:</strong>
+                                                <div>Topical BB + CAI
+                                                    <br>
+                                                    <br>Generic</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Combigan</h2>
+                                        <p class="lead text-muted">Timoptic (Timolol) 0.5% &amp; Alphagan (Brimonidine) 0.2%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma Combination agents</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>5, 10 mL</div>
+                                            </li>
+											<li><strong>Dosing:</strong>
+                                                <div>BID</div>
+                                            </li>
+                                            <li><strong>Description:</strong>
+                                                <div>Topical BB + Alpha adrenergic agonist
+                                                    <br>
+                                                    <br>Generic and popular</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="white collapsible-header text-center waves-effect">
+                                        <h2>Simbrinza</h2>
+                                        <p class="lead text-muted">Azopt (Brinzolamide) 1% &amp; Alphagan (Brimonidine) 0.2%</p>
+                                    </div>
+                                    <div class="white collapsible-body" >
+                                        <ul class="drug">
+                                            <li style="list-style:none"><span class="hidden">Glaucoma Combination agents</span></li>
+                                            <li><strong>How Supplied:</strong>
+                                                <div>8 mL</div>
+                                            </li>
+											<li><strong>Dosing:</strong>
+                                                <div>TID</div>
+                                            </li>
+                                            <li><strong>Description:</strong>
+                                                <div>Alpha adrenergic agonist &amp; CAI
+                                                    <br>
+                                                    <br>No beta blocker</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <footer class="cyan lighten-3 page-footer">
+        <div class="footer-copyright">
+            <div class="container"><img src="img/mw-logo.png"></div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/jquery.hideseek.min.js"></script>
+    <script>
+        $("#search").hideseek({
+            min_chars: 2
+        }), $(".close-button").click(function() {
+            $("#search").val("")
+        }), $(document).ready(function() {
+            $(".collapsible-header").click(function() {
+                $(this).find("i.fa").toggleClass("fa-chevron-down").toggleClass("fa-chevron-up")
+            })
+        }), $(".noEnterSubmit").keypress(function(e) {
+            return 13 != e.which && void(13 == e.which && e.preventDefault())
+        })
+    </script>
+    <div class="common hiddendiv"></div>
+</body>
+
+</htmL>
