@@ -5,7 +5,7 @@ title: 'Double Dribbble: manhart''s Hamburger Icon'
 
 Dribbble is an awesome resource for practicing making design come to life in code. It is perfect for inspiring you with wonderful designs you just have to recreate. The Double Dribbble series are snippets of design I have found inspiration from and felt the need to bring to life in code.
 
-This is my first Double Dribbble entry and it features a playful, yet simple hamburger icon animation. The original design work was created by the talented [John Manhart](manhart.io) and can be found on Dribbble [here](https://dribbble.com/shots/2903173-Hamburger-animation) and [here](https://dribbble.com/shots/2897013-Hamburger-Hamburger-Hamburger).
+This is my first Double Dribbble entry and it features a playful, yet simple hamburger icon animation. The original design work was created by the talented [John Manhart](https://manhart.io) and can be found on Dribbble [here](https://dribbble.com/shots/2903173-Hamburger-animation) and [here](https://dribbble.com/shots/2897013-Hamburger-Hamburger-Hamburger).
 
 ### Icon Animation
 
