@@ -45,6 +45,8 @@ Finally, have the `border-color` of the `.burger-container` and the `background-
 <p data-height="265" data-theme-id="0" data-slug-hash="LyVyaB" data-default-tab="css,result" data-user="mileswilhelm" data-embed-version="2" data-pen-title="Double Dribbble: manhart's hamburger icon" class="codepen">See the Pen <a href="https://codepen.io/mileswilhelm/pen/LyVyaB/">Double Dribbble: manhart's hamburger icon</a> by Miles Wilhelm (<a href="http://codepen.io/mileswilhelm">@mileswilhelm</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
+---
+
 ### Icon with Menu Reveal
 
 From the second linked design, the animation plays and then reveals a full-screen menu.
