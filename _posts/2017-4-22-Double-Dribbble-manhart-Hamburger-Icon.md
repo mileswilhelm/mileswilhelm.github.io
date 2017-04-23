@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Double Dribbble: manhart's Hamburger Icon
-category: 'Double Dribbble'
+category: Double Dribbble
 tags: [web, UX, UI, responsive, css, javascript, dribbble]
 ---
 
