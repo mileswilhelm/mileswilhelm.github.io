@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Double Dribbble: manhart"'"s Hamburger Icon
-date: 2017-04-22
+title: test
 ---
 
 Dribbble is an awesome resource for practicing making design come to life in code. It is perfect for inspiring you with wonderful designs you just have to recreate. The Double Dribbble series are snippets of design I have found inspiration from and felt the need to bring to life in code.
