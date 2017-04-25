@@ -12,7 +12,7 @@ $blue-alpha: #2979FF;
 $red: #1E88E5;
 $red-light: #64B5F6;
 $red-dark: #1565C0;
-$red-alpha: #2979FF;
+$red-alpha: #FF1744;
 
 $green: #4CAF50;
 $green-light: #81C784;
@@ -52,12 +52,16 @@ $dark-blue-gray: #00061a;
 $blue-gray: #000d33;
 $light-blue-gray: #ccd9ff;
 
+//Theme Colors
+$dark-theme-gray: #33404d;
+$light-theme-gray: #d8dcde;
+$dark-theme-gold: #d6bf0e;
+$light-theme-gold: #feef81;
+
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
 $serif-font-stack: Georgia, serif;
-$sans-serif-font-stack: "Lato","Trebuchet MS", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-serif-font-stack: "Lato","Trebuchet MS", "Segoe UI", $helveticaNeue;
 
 // Mobile breakpoints
 @mixin tablet {

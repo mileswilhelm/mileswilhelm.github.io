@@ -1,0 +1,191 @@
+<style>
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	
+	.svg-container {
+		position: relative;
+		width: 100%;
+		max-width: 1200px;
+		overflow: hidden;
+	}
+
+	.svg-img {
+		position: absolute;
+		width: 100%;
+		height: auto;
+		opacity: 0.5;
+		z-index: 2;
+		transition: opacity 0.75s, transform 0.75s;
+	}
+	
+	.svg-highlight {
+		opacity: 1;
+		transform: scale(1.2, 1.2);
+	}
+	
+	.svg-img.svg-total {
+		position: relative;
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	.svg-img.bridge {
+		top: 21.4%;
+		left: 16.3%;
+		width: 72%;
+	}
+	
+	.svg-img.pendant {
+		width: 1.9%;
+		top: 33.2%;
+		left: 24.1%;
+	}
+	
+	.svg-img.beam-far {
+		top: 0%;
+		left: 0%;
+		width: 67%;
+	}
+	
+	.svg-img.beam-close {
+		top: 27.2%;
+		left: 49.8%;
+		width: 50%;
+	}
+	
+	.svg-img.end-truck-close {
+		top: 42.9%;
+		left: 58.7%;
+		width: 34%;
+	}
+	
+	.svg-img.trolley {
+		top: 32.7%;
+		left: 34.9%;
+		width: 11.5%;
+	}
+	
+	.svg-img.wire-rope-hoist {
+		top: 28.9%;
+		left: 30.5%;
+		width: 21%;
+	}
+
+	.svg-img.end-truck-far {
+		top: 14.9%;
+		left: 9%;
+		width: 27.5%;
+	}
+
+	.svg-img.conductor-bar {
+		top: 1.2%;
+		left: 2.8%;
+		width: 65%;
+	}
+
+	.svg-img.festoon {
+		top: 27.7%;
+		left: 12%;
+		width: 30%;
+	}
+	
+	.beam-close, .beam-far, .trolley {
+		z-index: 3;
+	}
+	
+	.end-truck-close, .end-truck-far, .wire-rope-hoist, .conductor-bar, .pendant {
+		z-index: 4;
+	}
+	
+	.festoon {
+		z-index: 5;
+	}
+	
+	body {
+		font-family: 'Trebuchet MS', Arial, sans-serif;
+		font-size: 16px;
+	}
+
+</style>
+<div class="container">
+	<div class="svg-container">
+		<img src="crane-kit-bridge-color.svg" class="svg-img bridge" />
+		<img src="crane-kit-pendant-controls-color.svg" class="svg-img pendant" />
+		<img src="crane-kit-beam-far-color.svg" class="svg-img beam-far" />
+ 		<img src="crane-kit-beam-close-color.svg" class="svg-img beam-close" />
+		<img src="crane-kit-end-truck-close-color.svg" class="svg-img end-truck-close" />
+		<img src="crane-kit-trolley-color.svg" class="svg-img trolley" />
+		<img src="crane-kit-wire-rope-hoist-color.svg" class="svg-img wire-rope-hoist" />
+		<img src="crane-kit-end-truck-far-color.svg" class="svg-img end-truck-far" />
+		<img src="crane-kit-conductor-bar-color.svg" class="svg-img conductor-bar" />
+		<img src="crane-kit-festoon.svg" class="svg-img festoon" />
+		<img src="crane-kit-total.svg" class="svg-img svg-total"/>
+	</div>
+</div>
+
+<div class="container">
+	<label for="hoist">
+		<input type="checkbox" id="hoist" name="hoist" value="hoist" onchange="hoist();">
+		Hoist
+    </label>
+	<label for="endtrucks">
+		<input type="checkbox" id="endtrucks" name="endtrucks" value="endtrucks" onchange="endtrucks();">
+		End Trucks
+    </label>
+	<label for="pendant">
+		<input type="checkbox" id="pendant" name="pendant" value="pendant" onchange="pendant();">
+		Pendant
+    </label>
+	<label for="conductorbar">
+		<input type="checkbox" id="conductorbar" name="conductorbar" value="conductorbar" onchange="conductorbar();">
+		Conductor Bar
+    </label>
+	<label for="complete">
+		<input type="checkbox" id="complete" name="complete" value="complete" onchange="complete();">
+		Complete
+    </label>	
+</div>
+
+<script>
+	function hoist() {
+		var el = document.querySelectorAll('.wire-rope-hoist');
+		for (var i = 0; i < el.length; i++) {
+			el[i].classList.toggle('svg-highlight');
+		}
+	}
+	
+	function endtrucks() {
+		var el = document.querySelectorAll('[class*="end-truck"]');
+		for (var i = 0; i < el.length; i++) {
+			el[i].classList.toggle('svg-highlight');
+		}
+	}
+
+	function pendant() {
+		var el = document.querySelectorAll('.pendant');
+		for (var i = 0; i < el.length; i++) {
+			el[i].classList.toggle('svg-highlight');
+		}
+	}
+
+	function conductorbar() {
+		var el = Array.prototype.slice.call(document.querySelectorAll('.conductor-bar'));
+		var el2 = Array.prototype.slice.call(document.querySelectorAll('[class*="beam"]'));
+		
+		el.push.apply(el, el2);
+		
+		for (var i = 0; i < el.length; i++) {
+			el[i].classList.toggle('svg-highlight');
+		}
+	}
+
+	function complete() {
+		var el = document.querySelectorAll('.svg-img:not(:last-of-type)');
+		
+		for (var i = 0; i < el.length; i++) {
+			el[i].classList.toggle('svg-highlight');
+		}
+	}	
+</script>
