@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I'm a 26 year old fledgling web developer, eagerly learning every day.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Just some guy who loves basketball, front end web technology, and trying to learn something new every day.
 
-### Contact me
+### I'd love to hear from you!
 
-[email@domain.com](mailto:email@domain.com)
+[wilhelmme72@gmail.com](mailto:wilhelmme72@gmail.com)
