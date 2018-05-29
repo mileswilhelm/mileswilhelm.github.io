@@ -62,6 +62,7 @@ $light-theme-gold: #feef81;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif-font-stack: Georgia, serif;
 $sans-serif-font-stack: "Lato","Trebuchet MS", "Segoe UI", $helveticaNeue;
+$console-font-stack: 'Inconsolata', 'Consolas', monospace;
 
 // Mobile breakpoints
 @mixin tablet {
@@ -88,7 +89,7 @@ $sans-serif-font-stack: "Lato","Trebuchet MS", "Segoe UI", $helveticaNeue;
 
 @mixin text-underline($color-bg, $color-text) {
   background-image: linear-gradient($gray, $gray);
-  background-size: 1px 1px;
+  background-size: 3px 3px;
   background-repeat: repeat-x;
   background-position: 0% 95%;
 }
