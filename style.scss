@@ -33,7 +33,7 @@ body {
 .body-wrapper {
   overflow-x: hidden;
   max-width: 100vw;
-  background-color: $dark-blue-gray;
+  background-color: $blue-gray;
   color: $lightGray;
 }
 
@@ -133,6 +133,9 @@ a {
 
 nav a {
   color: $white;
+  &:visited {
+    color: $white;
+  }
 }
 
 // .post a {
@@ -305,7 +308,7 @@ nav {
 
 .wrapper-footer {
   margin-top: 50px;
-  background-color: $dark-theme-gold;
+  background-color: $dark-blue-gray;
 }
 
 footer {
