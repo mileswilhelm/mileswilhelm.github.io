@@ -121,6 +121,16 @@ a {
   }
 }
 
+.site-name a {
+  &:visited {
+    color: $blue-alpha;
+  }
+}
+
+nav a {
+  color: $darkGray;
+}
+
 // .post a {
 //   @include link-underline($color-background, $darkerGray, $color-selection);
 // }
