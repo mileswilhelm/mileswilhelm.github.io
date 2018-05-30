@@ -4,11 +4,9 @@ title: About
 permalink: /about/
 ---
 
-I'm a 26 year old fledgling web developer, eagerly learning every day.
+I'm a self-motivated 27 year old web developer trying to learn and get better ever day.
 
-### More Information
-
-Just some guy who loves basketball, front end web technology, and trying to learn something new every day.
+In my spare time, I love watching basketball, pretending to play moneyball with fantasy football, spending time with friends and family, and googling everything that makes me curious.
 
 ### I'd love to hear from you!
 
