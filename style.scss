@@ -122,6 +122,8 @@ a {
 }
 
 .site-name a {
+  text-decoration: none;
+  text-transform: uppercase;
   &:visited {
     color: $blue-alpha;
   }

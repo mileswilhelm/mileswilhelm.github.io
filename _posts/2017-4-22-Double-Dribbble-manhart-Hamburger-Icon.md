@@ -23,8 +23,7 @@ The secret sauce to making the first animation come to life is by making each ba
 	<span class="burger-bar hidden"></span>
 	<span class="burger-bar"></span>
 
-</div>
-```
+</div>```
 
 **NOTE:** *You could target the burger-bars in the middle without using the classes* `close` *and* `hidden` *by targeting them with* `nth-of-type` *, but for simplicity I used classes.*
 
