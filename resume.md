@@ -3,7 +3,7 @@ layout: resume
 title: Resume
 permalink: /resume/
 ---
-
+<div class="mb">
 <h2 class="color-orange-alpha text-center">Skills</h2>
 <h4>Languages</h4>
 <ul>
@@ -33,7 +33,8 @@ permalink: /resume/
   <li>Illustrator</li>
   <li>Xd</li>
 </ul>
-<div class="mb"></div>
+</div>
+<div class="mb">
 <h2 class="color-orange-alpha text-center">Experience</h2>
 <h4>Easton Advertising</h4>
 <h5>Web Developer</h5>
@@ -44,7 +45,8 @@ permalink: /resume/
   <li>Reduced page size of client's homepage by 60%</li>
   <li>Customized multiple client's APIs to produce touchscreen displays using up to date info dynamically</li>
 </ul>
-<div class="mb"></div>
+</div>
+<div class="mb">
 <h4>ACI Hoist &amp; Crane</h4>
 <h5>Web Developer</h5>
 <h6>2015 - 2017</h6>
@@ -54,7 +56,8 @@ permalink: /resume/
   <li>Implemented a Google Merchant Center account which doubled online orders received</li>
   <li>Began remake of the site using Magento and Bootstrap 4 to improve the front and back end of the site</li>
 </ul>
-<div class="mb"></div>
+</div>
+<div class="mb">
 <h2 class="color-orange-alpha text-center">Education</h2>
 <h4>Virginia Commonwealth University</h4>
 <h5>B.S. in Psychology</h5>
@@ -64,3 +67,4 @@ permalink: /resume/
   <li>3.6 GPA, graduated with cum laude honors</li>
   <li>Pre-graduate concentration track; coursework focused on research</li>
 </ul>
+</div>
