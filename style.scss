@@ -23,7 +23,7 @@ html {
 
 body {
 	background: $white;
-  font-family: $serif-font-stack;
+  font-family: $console-font-stack;
   font-weight: 400;
   line-height: 1.6;
   color: $darkerGray;
@@ -43,7 +43,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $sans-serif-font-stack;
   color: $darkerGray;
   font-weight: bolder;
   margin-bottom: 1rem;
@@ -112,16 +111,19 @@ p {
 
 a {
   color: $blue-alpha;
-  text-decoration: none;
+  // text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
     color: $blue-dark;
   }
+  &:visited {
+    color: $purple-alpha;
+  }
 }
 
-.post a {
-  @include link-underline($color-background, $darkerGray, $color-selection);
-}
+// .post a {
+//   @include link-underline($color-background, $darkerGray, $color-selection);
+// }
 
 ul, ol {
   margin-bottom: 1rem;
@@ -223,7 +225,6 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
   letter-spacing: 1px;
 }
 
@@ -231,7 +232,6 @@ img {
   margin: -5px 0 0 0;
   color: $gray;
   font-size: 18px;
-  font-family: $console-font-stack;
 
   @include tablet {
     margin: 3px 0;
@@ -241,7 +241,6 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
   font-size: 18px;
 
   a {
