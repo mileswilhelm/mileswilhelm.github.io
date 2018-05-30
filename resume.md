@@ -1,10 +1,10 @@
 ---
-layout: page
+layout: resume
 title: Resume
 permalink: /resume/
 ---
 
-<h2 class="color-purple-alpha">Skills</h2>
+<h2 class="color-purple-alpha text-center">Skills</h2>
 <h4>Languages</h4>
 <ul>
   <li>HTML</li>
@@ -34,7 +34,7 @@ permalink: /resume/
   <li>Xd</li>
 </ul>
 
-<h2 class="color-purple-alpha">Experience</h2>
+<h2 class="color-purple-alpha text-center">Experience</h2>
 <h4>Easton Advertising</h4>
 <h5>Web Developer</h5>
 <h6>2017 - Present</h6>
@@ -55,7 +55,7 @@ permalink: /resume/
   <li>Began remake of the site using Magento and Bootstrap 4 to improve the front and back end of the site</li>
 </ul>
 
-<h2 class="color-purple-alpha">Education</h2>
+<h2 class="color-purple-alpha text-center">Education</h2>
 <h4>Virginia Commonwealth University</h4>
 <h5>B.S. in Psychology</h5>
 <h6>2009 - 2013</h6>
