@@ -120,6 +120,7 @@ p {
 
 a {
   color: $blue-alpha;
+  color: #4dd0e1;
   // text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
@@ -127,6 +128,7 @@ a {
   }
   &:visited {
     color: $purple-alpha;
+    color: #db6aff;
   }
 }
 
@@ -135,6 +137,7 @@ a {
   text-transform: uppercase;
   &:visited {
     color: $blue-alpha;
+    color: #4dd0e1;
   }
 }
 
