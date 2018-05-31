@@ -5,11 +5,11 @@ permalink: /resume/
 ---
 <div class="container">
   <div class="row">
-    <div class="col-8">
+    <div class="col-md-8 order-2 order-md-1">
       <div class="mb">
         <h2 class="color-green-alpha text-center">Experience</h2>
-        <h4>Easton Advertising</h4>
-        <h5>Web Developer</h5>
+        <h4 class="mb-2">Easton Advertising</h4>
+        <h5 class="mb-2">Web Developer</h5>
         <h6>2017 - Present</h6>
 
         <ul>
@@ -19,8 +19,8 @@ permalink: /resume/
         </ul>
       </div>
       <div class="mb">
-        <h4>ACI Hoist &amp; Crane</h4>
-        <h5>Web Developer</h5>
+        <h4 class="mb-2">ACI Hoist &amp; Crane</h4>
+        <h5 class="mb-2">Web Developer</h5>
         <h6>2015 - 2017</h6>
 
         <ul>
@@ -31,8 +31,8 @@ permalink: /resume/
       </div>
       <div class="mb">
         <h2 class="color-green-alpha text-center">Education</h2>
-        <h4>Virginia Commonwealth University</h4>
-        <h5>B.S. in Psychology</h5>
+        <h4 class="mb-2">Virginia Commonwealth University</h4>
+        <h5 class="mb-2">B.S. in Psychology</h5>
         <h6>2009 - 2013</h6>
 
         <ul>
@@ -41,10 +41,10 @@ permalink: /resume/
         </ul>
       </div>
     </div>
-    <div class="col-4">
+    <div class="col-md-4 order-1 order-md-2">
       <div>
         <h2 class="color-green-alpha text-center">Skills</h2>
-        <h4>Languages</h4>
+        <h4 class="mb-2">Languages</h4>
         <ul>
           <li>HTML</li>
           <li>CSS</li>
@@ -53,7 +53,7 @@ permalink: /resume/
           <li>SQL</li>
         </ul>
 
-        <h4>Frameworks/Other</h4>
+        <h4 class="mb-2">Frameworks/Other</h4>
         <ul>
           <li>React</li>
           <li>React Native</li>
@@ -66,7 +66,7 @@ permalink: /resume/
           <li>Wordpress</li>
         </ul>
 
-        <h4>Programs</h4>
+        <h4 class="mb-2">Programs</h4>
         <ul>
           <li>Photoshop</li>
           <li>Illustrator</li>
