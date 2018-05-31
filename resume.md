@@ -3,7 +3,7 @@ layout: resume
 title: Resume
 permalink: /resume/
 ---
-<div class="container">
+<div class="container pt-md-3">
   <div class="row">
     <div class="col-md-8 order-2 order-md-1">
       <div class="mb">
