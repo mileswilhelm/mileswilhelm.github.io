@@ -4,7 +4,7 @@ title: Resume
 permalink: /resume/
 ---
 <div class="mb">
-<h2 class="color-orange-alpha text-center">Skills</h2>
+<h2 class="color-green-alpha text-center">Skills</h2>
 <h4>Languages</h4>
 <ul>
   <li>HTML</li>
@@ -35,7 +35,7 @@ permalink: /resume/
 </ul>
 </div>
 <div class="mb">
-<h2 class="color-orange-alpha text-center">Experience</h2>
+<h2 class="color-green-alpha text-center">Experience</h2>
 <h4>Easton Advertising</h4>
 <h5>Web Developer</h5>
 <h6>2017 - Present</h6>
@@ -58,7 +58,7 @@ permalink: /resume/
 </ul>
 </div>
 <div class="mb">
-<h2 class="color-orange-alpha text-center">Education</h2>
+<h2 class="color-green-alpha text-center">Education</h2>
 <h4>Virginia Commonwealth University</h4>
 <h5>B.S. in Psychology</h5>
 <h6>2009 - 2013</h6>
