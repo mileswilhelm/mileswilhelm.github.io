@@ -3,14 +3,14 @@ layout: resume
 title: Resume
 permalink: /resume/
 ---
-<div class="container mt-lg-3">
+<div class="container">
   <div class="row">
-    <div class="col-md-8 order-2 order-md-1">
-      <div class="mb-5">
-        <h2 class="color-green-alpha text-center mb-4">Experience</h2>
-        <h4 class="mb-2">Easton Advertising</h4 class="mb-2">
-        <h5 class="mb-2">Web Developer</h5 class="mb-2">
-        <p>2017 - Present</p>
+    <div class="col-8">
+      <div class="mb">
+        <h2 class="color-green-alpha text-center">Experience</h2>
+        <h4>Easton Advertising</h4>
+        <h5>Web Developer</h5>
+        <h6>2017 - Present</h6>
 
         <ul>
           <li>Drastically improved a client's API by adding caching, improving load times by up to 96%</li>
@@ -18,10 +18,10 @@ permalink: /resume/
           <li>Customized multiple client's APIs to produce touchscreen displays using up to date info dynamically</li>
         </ul>
       </div>
-      <div class="mb-5">
-        <h4 class="mb-2">ACI Hoist &amp; Crane</h4 class="mb-2">
-        <h5 class="mb-2">Web Developer</h5 class="mb-2">
-        <p>2015 - 2017</p>
+      <div class="mb">
+        <h4>ACI Hoist &amp; Crane</h4>
+        <h5>Web Developer</h5>
+        <h6>2015 - 2017</h6>
 
         <ul>
           <li>Increased the amount of products offered online by over 400%</li>
@@ -29,11 +29,11 @@ permalink: /resume/
           <li>Began remake of the site using Magento and Bootstrap 4 to improve the front and back end of the site</li>
         </ul>
       </div>
-      <div class="mb-5">
+      <div class="mb">
         <h2 class="color-green-alpha text-center">Education</h2>
-        <h4 class="mb-2">Virginia Commonwealth University</h4 class="mb-2">
-        <h5 class="mb-2">B.S. in Psychology</h5 class="mb-2">
-        <p>2009 - 2013</p>
+        <h4>Virginia Commonwealth University</h4>
+        <h5>B.S. in Psychology</h5>
+        <h6>2009 - 2013</h6>
 
         <ul>
           <li>3.6 GPA, graduated with cum laude honors</li>
@@ -41,10 +41,10 @@ permalink: /resume/
         </ul>
       </div>
     </div>
-    <div class="col-md-4 order-1 order-md-2">
+    <div class="col-4">
       <div>
         <h2 class="color-green-alpha text-center">Skills</h2>
-        <h4 class="mb-2">Languages</h4 class="mb-2">
+        <h4>Languages</h4>
         <ul>
           <li>HTML</li>
           <li>CSS</li>
@@ -53,7 +53,7 @@ permalink: /resume/
           <li>SQL</li>
         </ul>
 
-        <h4 class="mb-2">Frameworks/Other</h4 class="mb-2">
+        <h4>Frameworks/Other</h4>
         <ul>
           <li>React</li>
           <li>React Native</li>
@@ -66,7 +66,7 @@ permalink: /resume/
           <li>Wordpress</li>
         </ul>
 
-        <h4 class="mb-2">Programs</h4 class="mb-2">
+        <h4>Programs</h4>
         <ul>
           <li>Photoshop</li>
           <li>Illustrator</li>
