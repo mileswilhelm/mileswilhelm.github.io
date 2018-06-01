@@ -22,3 +22,20 @@ layout: default
     </article>
   {% endfor %}
 </div>
+
+<div class="works" style="display: none;">
+  {% for work in site.works %}
+    <article class="post">
+
+      <h1 class="mb-3">Works</h1>
+
+      <h2><a href="{{ site.baseurl }}{{ work.url }}">{{ work.title }}</a></h2>
+
+      <div class="entry">
+        {{ work.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ work.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>
