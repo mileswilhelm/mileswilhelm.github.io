@@ -14,5 +14,5 @@ If you haven't heard of a Caesar Cipher, don't worry; I had no clue what it was 
 
 Below is my take on encoding and decoding a Caesar Cipher. It turned out to be a fun little project manipulating input, comparing arrays, handling case sensitivity, and putting it all back together.
 
-<p data-height="265" data-theme-id="0" data-slug-hash="aKvNxX" data-default-tab="js,result" data-user="mileswilhelm" data-embed-version="2" data-pen-title="Caesar Cipher" class="codepen">See the Pen <a href="https://codepen.io/mileswilhelm/pen/aKvNxX/">Caesar Cipher</a> by Miles Wilhelm (<a href="https://codepen.io/mileswilhelm">@mileswilhelm</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="0" data-slug-hash="aKvNxX" data-default-tab="js,result" data-user="mileswilhelm" data-embed-version="2" data-pen-title="Caesar Cipher" class="codepen">See the Pen <a href="https://codepen.io/mileswilhelm/pen/aKvNxX/">Caesar Cipher</a> by Miles Wilhelm (<a href="https://codepen.io/mileswilhelm">@mileswilhelm</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>

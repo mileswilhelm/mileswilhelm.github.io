@@ -42,7 +42,7 @@ For the X icon to appear, apply `transform: rotate(45deg)` to one of the middle 
 
 Finally, have the `border-color` of the `.burger-container` and the `background-color` of the `.burger-bar`s change on interaction. Make sure to add `transition` for all of the transforming styles. The end result looks like this, mimicking the original design.
 
-<p data-height="265" data-theme-id="0" data-slug-hash="LyVyaB" data-default-tab="css,result" data-user="mileswilhelm" data-embed-version="2" data-pen-title="Double Dribbble: manhart's hamburger icon" class="codepen">See the Pen <a href="https://codepen.io/mileswilhelm/pen/LyVyaB/">Double Dribbble: manhart's hamburger icon</a> by Miles Wilhelm (<a href="http://codepen.io/mileswilhelm">@mileswilhelm</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="400" data-theme-id="0" data-slug-hash="LyVyaB" data-default-tab="css,result" data-user="mileswilhelm" data-embed-version="2" data-pen-title="Double Dribbble: manhart's hamburger icon" class="codepen">See the Pen <a href="https://codepen.io/mileswilhelm/pen/LyVyaB/">Double Dribbble: manhart's hamburger icon</a> by Miles Wilhelm (<a href="http://codepen.io/mileswilhelm">@mileswilhelm</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ---
